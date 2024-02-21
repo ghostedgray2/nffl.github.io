@@ -133,6 +133,108 @@ h1 {
   padding-left: 10px;
   text-align: center;
 }
+    .sr-only {
+  position: absolute;
+  top: -30em;
+}
+
+table.sortable td,
+table.sortable th {
+  padding: 0.125em 0.25em;
+  width: 8em;
+}
+
+table.sortable th {
+  font-weight: bold;
+  border-bottom: thin solid #888;
+  position: relative;
+}
+
+table.sortable th.no-sort {
+  padding-top: 0.35em;
+}
+
+table.sortable th:nth-child(5) {
+  width: 10em;
+}
+
+table.sortable th button {
+  position: absolute;
+  padding: 4px;
+  margin: 1px;
+  font-size: 100%;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  display: inline;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  cursor: pointer;
+}
+
+table.sortable th button span {
+  position: absolute;
+  right: 4px;
+}
+
+table.sortable th[aria-sort="descending"] span::after {
+  content: "▼";
+  color: currentcolor;
+  font-size: 100%;
+  top: 0;
+}
+
+table.sortable th[aria-sort="ascending"] span::after {
+  content: "▲";
+  color: currentcolor;
+  font-size: 100%;
+  top: 0;
+}
+
+table.show-unsorted-icon th:not([aria-sort]) button span::after {
+  content: "♢";
+  color: currentcolor;
+  font-size: 100%;
+  position: relative;
+  top: -3px;
+  left: -4px;
+}
+
+table.sortable td.num {
+  text-align: right;
+}
+
+table.sortable tbody tr:nth-child(odd) {
+  background-color: #ddd;
+}
+
+/* Focus and hover styling */
+
+table.sortable th button:focus,
+table.sortable th button:hover {
+  padding: 2px;
+  border: 2px solid currentcolor;
+  background-color: #e5f4ff;
+}
+
+table.sortable th button:focus span,
+table.sortable th button:hover span {
+  right: 2px;
+}
+
+table.sortable th:not([aria-sort]) button:focus span::after,
+table.sortable th:not([aria-sort]) button:hover span::after {
+  content: "▼";
+  color: currentcolor;
+  font-size: 100%;
+  top: 0;
+}
+
     </style
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
@@ -185,23 +287,41 @@ h1 {
   </head>
   <body>
     <h1>Passing Stats</h1>
-   
-  <table id="myTable">
+   <div class="table-wrap"><table class="sortable">
+  <caption>
+    Students currently enrolled in WAI-ARIA 101
+    <span class="sr-only">, column headers with buttons are sortable.</span>
+  </caption>
+  <thead>
     <tr>
-     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
-      <th onclick="sortTable(0)">Player</th>
-      <th onclick="sortTable(1)">QBR</th>
-      <th onclick="sortTable(2)">Cmp</th>
-      <th onclick="sortTable(3)">Att</th>
-      <th onclick="sortTable(4)">Cmp%</th>
-      <th onclick="sortTable(5)">TD</th>
-      <th onclick="sortTable(6)">INT</th>
-      <th onclick="sortTable(7)">Yds</th>
-      <th onclick="sortTable(8)">INT%</th>
-      <th onclick="sortTable(9)">Sk</th>
-      <th onclick="sortTable(10)">Yds/Att</th>
-      <th onclick="sortTable(11)">GP</th>
+      <th>
+        <button>
+          First Name
+          <span aria-hidden="true"></span>
+        </button>
+      </th>
+      <th aria-sort="ascending">
+        <button>
+          Last Name
+          <span aria-hidden="true"></span>
+        </button>
+      </th>
+      <th>
+        <button>
+          Company
+          <span aria-hidden="true"></span>
+        </button>
+      </th>
+      <th class="no-sort">Address</th>
+      <th class="num">
+        <button>
+          Favorite Number
+          <span aria-hidden="true"></span>
+        </button>
+      </th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>doctorthom</td> <!-- Player Name -->
       <td>123.03</td> <!-- QB Rating -->
@@ -230,7 +350,7 @@ h1 {
       <td>23.6</td> <!-- Yards/Attempt -->
       <td>1</td> <!-- Games Played -->
     </tr> <!-- {playerName} -->
-    <tr>
+     <tr>
       <td>privacied</td> <!-- Player Name -->
       <td>105.45</td> <!-- QB Rating -->
       <td>16</td> <!-- Completions -->
@@ -244,7 +364,7 @@ h1 {
       <td>16.65</td> <!-- Yards/Attempt -->
       <td>1</td> <!-- Games Played -->
     </tr> <!-- {playerName} -->
-    <tr>
+     <tr>
       <td>robogamer</td> <!-- Player Name -->
       <td>89.88</td> <!-- QB Rating -->
       <td>9</td> <!-- Completions -->
@@ -258,7 +378,7 @@ h1 {
       <td>15.28</td> <!-- Yards/Attempt -->
       <td>1</td> <!-- Games Played -->
     </tr> <!-- {playerName} -->
-    <tr>
+     <tr>
       <td>kayden</td> <!-- Player Name -->
       <td>87.25</td> <!-- QB Rating -->
       <td>17</td> <!-- Completions -->
@@ -272,7 +392,7 @@ h1 {
       <td>12.14</td> <!-- Yards/Attempt -->
       <td>1</td> <!-- Games Played -->
     </tr> <!-- {playerName} -->
-    <tr>
+     <tr>
       <td>bsstacks</td> <!-- Player Name -->
       <td>85.29</td> <!-- QB Rating -->
       <td>13</td> <!-- Completions -->
@@ -300,7 +420,7 @@ h1 {
       <td>15.48</td> <!-- Yards/Attempt -->
       <td>1</td> <!-- Games Played -->
     </tr> <!-- {playerName} -->
-    <tr>
+     <tr>
       <td>chrisbugg</td> <!-- Player Name -->
       <td>79.67</td> <!-- QB Rating -->
       <td>27</td> <!-- Completions -->
@@ -314,6 +434,7 @@ h1 {
       <td>10.74</td> <!-- Yards/Attempt -->
       <td>2</td> <!-- Games Played -->
     </tr> <!-- {playerName} -->
+  
     <tr>
       <td>mayor</td> <!-- Player Name -->
       <td>40.63</td> <!-- QB Rating -->
@@ -328,64 +449,180 @@ h1 {
       <td>9.13</td> <!-- Yards/Attempt -->
       <td>1</td> <!-- Games Played -->
     </tr> <!-- {playerName} -->
-  </table>
+  </tbody>
+<script>
+  /*
+ *   This content is licensed according to the W3C Software License at
+ *   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+ *
+ *   File:   sortable-table.js
+ *
+ *   Desc:   Adds sorting to a HTML data table that implements ARIA Authoring Practices
+ */
 
-  <script>
-  function sortTable(n) {
-    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-    table = document.getElementById("myTable");
-    switching = true;
-    //Set the sorting direction to ascending:
-    dir = "asc"; 
-    /*Make a loop that will continue until
-    no switching has been done:*/
-    while (switching) {
-      //start by saying: no switching is done:
-      switching = false;
-      rows = table.rows;
-      /*Loop through all table rows (except the
-      first, which contains table headers):*/
-      for (i = 1; i < (rows.length - 1); i++) {
-        //start by saying there should be no switching:
-        shouldSwitch = false;
-        /*Get the two elements you want to compare,
-        one from current row and one from the next:*/
-        x = rows[i].getElementsByTagName("TD")[n];
-        y = rows[i + 1].getElementsByTagName("TD")[n];
-        /*check if the two rows should switch place,
-        based on the direction, asc or desc:*/
-        if (dir == "asc") {
-          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-            //if so, mark as a switch and break the loop:
-            shouldSwitch= true;
-            break;
-          }
-        } else if (dir == "desc") {
-          if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-            //if so, mark as a switch and break the loop:
-            shouldSwitch = true;
-            break;
-          }
-        }
+'use strict';
+
+class SortableTable {
+  constructor(tableNode) {
+    this.tableNode = tableNode;
+
+    this.columnHeaders = tableNode.querySelectorAll('thead th');
+
+    this.sortColumns = [];
+
+    for (var i = 0; i < this.columnHeaders.length; i++) {
+      var ch = this.columnHeaders[i];
+      var buttonNode = ch.querySelector('button');
+      if (buttonNode) {
+        this.sortColumns.push(i);
+        buttonNode.setAttribute('data-column-index', i);
+        buttonNode.addEventListener('click', this.handleClick.bind(this));
       }
-      if (shouldSwitch) {
-        /*If a switch has been marked, make the switch
-        and mark that a switch has been done:*/
-        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-        switching = true;
-        //Each time a switch is done, increase this count by 1:
-        switchcount ++;      
+    }
+
+    this.optionCheckbox = document.querySelector(
+      'input[type="checkbox"][value="show-unsorted-icon"]'
+    );
+
+    if (this.optionCheckbox) {
+      this.optionCheckbox.addEventListener(
+        'change',
+        this.handleOptionChange.bind(this)
+      );
+      if (this.optionCheckbox.checked) {
+        this.tableNode.classList.add('show-unsorted-icon');
+      }
+    }
+  }
+
+  setColumnHeaderSort(columnIndex) {
+    if (typeof columnIndex === 'string') {
+      columnIndex = parseInt(columnIndex);
+    }
+
+    for (var i = 0; i < this.columnHeaders.length; i++) {
+      var ch = this.columnHeaders[i];
+      var buttonNode = ch.querySelector('button');
+      if (i === columnIndex) {
+        var value = ch.getAttribute('aria-sort');
+        if (value === 'descending') {
+          ch.setAttribute('aria-sort', 'ascending');
+          this.sortColumn(
+            columnIndex,
+            'ascending',
+            ch.classList.contains('num')
+          );
+        } else {
+          ch.setAttribute('aria-sort', 'descending');
+          this.sortColumn(
+            columnIndex,
+            'descending',
+            ch.classList.contains('num')
+          );
+        }
       } else {
-        /*If no switching has been done AND the direction is "asc",
-        set the direction to "desc" and run the while loop again.*/
-        if (switchcount == 0 && dir == "asc") {
-          dir = "desc";
-          switching = true;
+        if (ch.hasAttribute('aria-sort') && buttonNode) {
+          ch.removeAttribute('aria-sort');
         }
       }
     }
   }
-  </script>
+
+  sortColumn(columnIndex, sortValue, isNumber) {
+    function compareValues(a, b) {
+      if (sortValue === 'ascending') {
+        if (a.value === b.value) {
+          return 0;
+        } else {
+          if (isNumber) {
+            return a.value - b.value;
+          } else {
+            return a.value < b.value ? -1 : 1;
+          }
+        }
+      } else {
+        if (a.value === b.value) {
+          return 0;
+        } else {
+          if (isNumber) {
+            return b.value - a.value;
+          } else {
+            return a.value > b.value ? -1 : 1;
+          }
+        }
+      }
+    }
+
+    if (typeof isNumber !== 'boolean') {
+      isNumber = false;
+    }
+
+    var tbodyNode = this.tableNode.querySelector('tbody');
+    var rowNodes = [];
+    var dataCells = [];
+
+    var rowNode = tbodyNode.firstElementChild;
+
+    var index = 0;
+    while (rowNode) {
+      rowNodes.push(rowNode);
+      var rowCells = rowNode.querySelectorAll('th, td');
+      var dataCell = rowCells[columnIndex];
+
+      var data = {};
+      data.index = index;
+      data.value = dataCell.textContent.toLowerCase().trim();
+      if (isNumber) {
+        data.value = parseFloat(data.value);
+      }
+      dataCells.push(data);
+      rowNode = rowNode.nextElementSibling;
+      index += 1;
+    }
+
+    dataCells.sort(compareValues);
+
+    // remove rows
+    while (tbodyNode.firstChild) {
+      tbodyNode.removeChild(tbodyNode.lastChild);
+    }
+
+    // add sorted rows
+    for (var i = 0; i < dataCells.length; i += 1) {
+      tbodyNode.appendChild(rowNodes[dataCells[i].index]);
+    }
+  }
+
+  /* EVENT HANDLERS */
+
+  handleClick(event) {
+    var tgt = event.currentTarget;
+    this.setColumnHeaderSort(tgt.getAttribute('data-column-index'));
+  }
+
+  handleOptionChange(event) {
+    var tgt = event.currentTarget;
+
+    if (tgt.checked) {
+      this.tableNode.classList.add('show-unsorted-icon');
+    } else {
+      this.tableNode.classList.remove('show-unsorted-icon');
+    }
+  }
+}
+
+// Initialize sortable table buttons
+window.addEventListener('load', function () {
+  var sortableTables = document.querySelectorAll('table.sortable');
+  for (var i = 0; i < sortableTables.length; i++) {
+    new SortableTable(sortableTables[i]);
+  }
+});
+
+</script>
+</table></div>
+        
+  
 </body>
 
 </html>
