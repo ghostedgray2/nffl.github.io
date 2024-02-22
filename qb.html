@@ -9,6 +9,7 @@
   padding: 0;
   margin: 0;
   font-family: "Play";
+  background-color: lightgray;
 }
 body {
 }
@@ -212,14 +213,16 @@ table.sortable td.num {
 table.sortable tbody tr:nth-child(odd) {
   background-color: #ddd;
 }
+    table.sortable tbody tr:nth-child(even) {
+  background-color: #ff;
+}
 
 /* Focus and hover styling */
 
 table.sortable th button:focus,
 table.sortable th button:hover {
   padding: 2px;
-  border: 2px solid currentcolor;
-  background-color: #e5f4ff;
+  background-color: #ed324d;
 }
 
 table.sortable th button:focus span,
@@ -234,6 +237,9 @@ table.sortable th:not([aria-sort]) button:hover span::after {
   font-size: 100%;
   top: 0;
 }
+    table.sortable td {
+      border: 0.5px dashed lightgray
+    }
 
     </style
   <meta charset="utf-8">
@@ -289,18 +295,17 @@ table.sortable th:not([aria-sort]) button:hover span::after {
     <h1>Passing Stats</h1>
    <div class="table-wrap"><table class="sortable">
   <caption>
-    Students currently enrolled in WAI-ARIA 101
-    <span class="sr-only">, column headers with buttons are sortable.</span>
+ 
   </caption>
   <thead>
     <tr>
-      <th class="num">
+      <th>
         <button>
           Player
           <span aria-hidden="true"></span>
         </button>
       
-       <th class="num">
+       <th class="num" aria-sort="descending">
         <button>
           QBR
           <span aria-hidden="true"></span>
@@ -360,12 +365,7 @@ table.sortable th:not([aria-sort]) button:hover span::after {
           <span aria-hidden="true"></span>
         </button>
       
-      <th class="noSort">
-        <button>
-          GP
-          <span aria-hidden="true"></span>
-        </button>
-      </th>
+      <th class="noSort">GP</th>
     </tr>
   </thead>
   <tbody>
