@@ -772,10 +772,10 @@ header img {
       function newRow() {
         var row = document.createElement("tr")
 
-        for (var i = 0; i < 12; i++) {
+        for (var i = 0; i < 8; i++) {
           var newcell = document.createElement("td")
           row.appendChild(newcell)
-          if (i == 11) {
+          if (i == 7) {
             var placeholder = document.createTextNode("1");
             newcell.appendChild(placeholder);
           }
