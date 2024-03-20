@@ -1,0 +1,3 @@
+function loadHeader() {
+  return false;
+}
