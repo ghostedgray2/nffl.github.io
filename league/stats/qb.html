@@ -1,675 +1,872 @@
+<area id="html">
 <!DOCTYPE html>
 <html>
 
 <head>
   <style>
     html {
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  font-family: "Play";
-  background-color: lightgray;
-}
-body {
-}
-header {
-  width: 100%;
-  height: 50px;
-  background-color: #1c1c1c;
-  color: white;
-  padding: 5px;
-  vertical-align: auto;
-  line-height: 3rem;
-  padding-left: 25px;
-}
-b {
-  font-size: 25px;
-  text-decoration: none;
-  color: white;
-  display: inline-block;
-}
-
-a {
-  text-decoration: none;
-}
-/* Dropdown Button */
-.dropbtn {
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-
-.gra {
-  background: rgb(28,28,28);
-  background: linear-gradient(180deg, rgba(28,28,28,1) 0%, rgba(28,28,28,1) 0%, rgba(0,212,255,0) 100%);
-  height: 2px;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-/* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-/* Style the submit button with a specific background color etc */
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-/* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-/* Add a background color and some padding around the form */
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-
-th {
-  background-color: #ff5252;
-  color: white;
-}
-
-h1 {
-  padding-left: 10px;
-  text-align: center;
-}
-    .sr-only {
-  position: absolute;
-  top: -30em;
-}
-
-table.sortable td,
-table.sortable th {
-  padding: 0.125em 0.25em;
-  width: 8em;
-}
-
-table.sortable th {
-  font-weight: bold;
-  border-bottom: thin solid #888;
-  position: relative;
-}
-
-table.sortable th.no-sort {
-  padding-top: 0.35em;
-}
-
-table.sortable th:nth-child(5) {
-  width: 10em;
-}
-
-table.sortable th button {
-  position: absolute;
-  padding: 4px;
-  margin: 1px;
-  font-size: 100%;
-  font-weight: bold;
-  background: transparent;
-  border: none;
-  display: inline;
-  right: 0;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: left;
-  outline: none;
-  cursor: pointer;
-}
-
-table.sortable th button span {
-  position: absolute;
-  right: 4px;
-}
-
-table.sortable th[aria-sort="descending"] span::after {
-  content: "▼";
-  color: currentcolor;
-  font-size: 100%;
-  top: 0;
-}
-
-table.sortable th[aria-sort="ascending"] span::after {
-  content: "▲";
-  color: currentcolor;
-  font-size: 100%;
-  top: 0;
-}
-
-table.show-unsorted-icon th:not([aria-sort]) button span::after {
-  content: "♢";
-  color: currentcolor;
-  font-size: 100%;
-  position: relative;
-  top: -3px;
-  left: -4px;
-}
-
-table.sortable td.num {
-  text-align: right;
-}
-
-table.sortable tbody tr:nth-child(odd) {
-  background-color: #ddd;
-}
-    table.sortable tbody tr:nth-child(even) {
-  background-color: #ff;
-}
-
-/* Focus and hover styling */
-
-table.sortable th button:focus,
-table.sortable th button:hover {
-  padding: 2px;
-  background-color: #ed324d;
-}
-
-table.sortable th button:focus span,
-table.sortable th button:hover span {
-  right: 2px;
-}
-
-table.sortable th:not([aria-sort]) button:focus span::after,
-table.sortable th:not([aria-sort]) button:hover span::after {
-  content: "▼";
-  color: currentcolor;
-  font-size: 100%;
-  top: 0;
-}
-    table.sortable td {
-      border: 0.5px dashed lightgray
+      height: 100%;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      font-family: "Play";
+      background-color: #1c1c1c;
     }
 
-    </style
+    body {}
+
+    header {
+      width: 100%;
+      height: 50px;
+      background-color: #2e2d2d;
+      color: white;
+      padding: 5px;
+      vertical-align: auto;
+      line-height: 3rem;
+      padding-left: 25px;
+    }
+
+    b {
+      font-size: 25px;
+      text-decoration: none;
+      color: white;
+      display: inline-block;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* Dropdown Button */
+    .dropbtn {
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+
+    .gra {
+      height: 1px;
+      width: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Style inputs with type="text", select elements and textareas */
+    input[type=text],
+    select,
+    textarea {
+      width: 100%;
+      /* Full width */
+      padding: 12px;
+      /* Some padding */
+      border: 1px solid #ccc;
+      /* Gray border */
+      border-radius: 4px;
+      /* Rounded borders */
+      box-sizing: border-box;
+      /* Make sure that padding and width stays in place */
+      margin-top: 6px;
+      /* Add a top margin */
+      margin-bottom: 16px;
+      /* Bottom margin */
+      resize: vertical
+        /* Allow the user to vertically resize the textarea (not horizontally) */
+    }
+
+    /* Style the submit button with a specific background color etc */
+    input[type=submit] {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    /* When moving the mouse over the submit button, add a darker green color */
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    /* Add a background color and some padding around the form */
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    th {
+      color: black;
+      background-color: transparent;
+    }
+
+    h1 {
+      padding-left: 10px;
+      text-align: center;
+    }
+
+    .sr-only {
+      position: absolute;
+      top: -30em;
+    }
+
+    table.sortable td,
+    table.sortable th {
+      padding: 0.125em 0.25em;
+      width: 8em;
+      color: black;
+    }
+
+    table.sortable th {
+      font-weight: bold;
+      border-bottom: thin solid #888;
+      position: relative;
+    }
+
+
+
+    table.sortable th.no-sort {
+      padding-top: 0.35em;
+    }
+
+    table.sortable th:nth-child(5) {
+      width: 10em;
+    }
+
+    table.sortable th button {
+      position: absolute;
+      padding: 4px;
+      margin: 1px;
+      font-size: 100%;
+      font-weight: bold;
+      background: transparent;
+      border: none;
+      display: inline;
+      right: 0;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      text-align: left;
+      outline: none;
+      cursor: pointer;
+      transition: all 250ms;
+    }
+
+    table.sortable th button span {
+      position: absolute;
+      right: 4px;
+    }
+
+    table.sortable th[aria-sort="descending"] span::after {
+      content: "▼";
+      color: black;
+      font-size: 100%;
+      top: 0;
+    }
+
+    table.sortable th[aria-sort="ascending"] span::after {
+      content: "▲";
+      color: currentcolor;
+      font-size: 100%;
+      top: 0;
+    }
+
+    table.show-unsorted-icon th:not([aria-sort]) button span::after {
+      content: "♢";
+      color: currentcolor;
+      font-size: 100%;
+      position: relative;
+      top: -3px;
+      left: -4px;
+    }
+
+    table.sortable td.num {
+      text-align: right;
+    }
+
+    table.sortable tbody tr:nth-child(odd) td {
+      background-color: #4a4a4a;
+      border-left: #545454 1px dotted;
+      border-right: #545454 1px dotted;
+    }
+
+    table.sortable tbody tr:nth-child(even) td {
+      background-color: #666666;
+      border-left: #545454 1px dotted;
+      border-right: #545454 1px dotted;
+    }
+
+    /* Focus and hover styling */
+
+    table.sortable th button:focus,
+    table.sortable th button:hover {
+      padding: 2px;
+      background-color:rgba(0, 0, 0, 0.2);
+      transition: all 250ms;
+    }
+
+    table.sortable th button:focus span,
+    table.sortable th button:hover span {
+      right: 2px;
+    }
+
+    table.sortable th:not([aria-sort]) button:focus span::after,
+    table.sortable th:not([aria-sort]) button:hover span::after {
+      color: currentcolor;
+      font-size: 100%;
+      top: 0;
+    }
+
+    table.sortable td {
+      border: 0.5px dashed #545454;
+      color: white
+    }
+  </style>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>QB Stats | NFFL-FF2</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <title>QB Stats | UFA S3</title>
+  <link href="/style.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header>
-    <a href="index.html"><b>Home</b></a>
-    <div class="dropdown">
-      <a href="index.html" class="dropbtn"><b>Stats</b></a>
-      <div class="dropdown-content">
-        <a href="qb.html">QB</a>
-        <a href="wr.html">WR</a>
-        <a href="db.html">DB</a>
-        <a href="de.html">DE</a>
+  <blank id="enclosure">
+    <header>
+      <a class="homelink"> <img src="https://i.ibb.co/5kg3xCQ/ufaframe.png"
+          style="aspect-ratio: 64 / 25; width: auto; height: 30px; text-align: center; margin: auto; vertical-align: middle; margin-top: -10px; "></a>
+      <div class="dropdown">
+        <a href="index.html" class="dropbtn">
+          <b>Stats</b></a>
+        <div class="dropdown-content">
+          <a href="qb.html" class="qblink">QB</a>
+          <a href="/league/stats/wr" class="wrlink">WR</a>
+          <a href="db.html" class="dblink">DB</a>
+          <a href="de.html" class="delink">DE</a>
+        </div>
       </div>
-    </div>
-     <a href="standings.html"><b>Standings</b></a>
-  </header>
-  <header class="gra"></header>
-  
-  <script src="script.js"></script>
+
+      <a href="standings.html" class="standingslink">
+        <b>Standings</b>
+      </a>
+      <div class="dropdown" style="float: right; margin-right: 30px;">
+        <a href="index.html" class="dropbtn">
+          <b>︙</b></a>
+        <div class="dropdown-content" style="left: -140px;">
+          <a href="?editor=true" id="statmode">Stat Mode</a>
+        </div>
+      </div>
+    </header>
+    <header class="gra">
+    </header>
+  </blank>
+  <script src="/globalHeader.js"></script>
+
+  <script>
+
+    // initialization
+
+
+  </script>
+  <script src="/script.js"></script>
   <script src="{% static 'js/sortable.js' %}"></script>
   <link href="sortable.css" rel="stylesheet" />
   <script src="sortable.js"></script>
   <style>
-  table {
-    border-spacing: 0;
-    width: 100%;
-    border: 1px solid #ddd;
-  }
+    table {
+      border-spacing: 0;
+      width: 90%;
+      border: 1px solid #ddd;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-  th {
-    cursor: pointer;
-  }
+    th {
+      cursor: pointer;
+    }
 
-  th, td {
-    text-align: left;
-    padding: 16px;
-  }
+    th,
+    td {
+      text-align: left;
+      padding: 16px;
+    }
 
-  tr:nth-child(even) {
-    background-color: #f2f2f2
-  }
+    tr:nth-child(even) {
+      background-color: #f2f2f2
+    }
+
+    thead {
+      color: black;
+      text-decoration: none;
+      background: linear-gradient(90deg, rgba(0,196,255,1) 0%, rgba(0,255,254,1) 100%);
+    }
+
+    table.sortable th button {
+      color: black;
+      text-decoration: none;
+      font-family: 'Play';
+      vertical-align: bottom;
+      padding: 2px;
+    }
+
+    th button {
+      text-decoration: none;
+      color: black;
+    }
+
+    .buttonholder>button {
+      color: white;
+      font-weight: bold;
+      vertical-align: middle;
+      height: 100%;
+      transition: all 250ms;
+      background-color: #373838;
+      border: none;
+      width: 25%;
+      text-shadow: 0px 0px 25px rgba(0, 0, 0, 1);
+      text-shadow: 0px 0px 25px rgba(0, 0, 0, 1),
+        0px 0px 25px rgba(0, 0, 0, 1);
+      overflow: hidden;
+    }
+
+    .buttonholder>button:hover {
+      background-color: #616161;
+      transition: all 250ms;
+      cursor: pointer;
+      font-size: 17px;
+    }
+
+    .selectedbutton {
+      background: rgb(0,196,255);
+      background: linear-gradient(90deg, rgba(0,196,255,1) 0%, rgba(0,255,254,1) 100%);
+      background-clip:content-box;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gra {
+      background: rgb(0,196,255);
+      background: linear-gradient(90deg, rgba(0,196,255,1) 0%, rgba(0,255,254,1) 100%);
+    }
   </style>
   </head>
+
   <body>
-    <h1>Passing Stats</h1>
-   <div class="table-wrap"><table class="sortable">
-  <caption>
- 
-  </caption>
-  <thead>
-    <tr>
-      <th>
-        <button>
-          Player
-          <span aria-hidden="true"></span>
-        </button>
-      
-       <th class="num" aria-sort="descending">
-        <button>
-          QBR
-          <span aria-hidden="true"></span>
-        </button>
-      
-       <th class="num">
-        <button>
-          Comp
-          <span aria-hidden="true"></span>
-        </button>
-      
-      <th class="num">
-        <button>
-          Att
-          <span aria-hidden="true"></span>
-        </button>
-      
-      <th class="num">
-        <button>
-          Comp%
-          <span aria-hidden="true"></span>
-        </button>
-      
-      <th class="num">
-        <button>
-          TD
-          <span aria-hidden="true"></span>
-        </button>
-      
-      <th class="num">
-        <button>
-          INT
-          <span aria-hidden="true"></span>
-        </button>
-      
-      <th class="num">
-        <button>
-          Yds
-          <span aria-hidden="true"></span>
-        </button>
-      
-      <th class="num">
-        <button>
-          INT%
-          <span aria-hidden="true"></span>
-        </button>
-      
-      <th class="num">
-        <button>
-          Sk
-          <span aria-hidden="true"></span>
-        </button>
-      
-      <th class="num">
-        <button>
-          Yds/Att
-          <span aria-hidden="true"></span>
-        </button>
-      
-      <th class="noSort">GP</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>doctorthom</td> <!-- Player Name -->
-      <td>123.03</td> <!-- QB Rating -->
-      <td>18</td> <!-- Completions -->
-      <td>37</td> <!-- Attempts --> 
-      <td>48.6</td> <!-- Completion Percent -->
-      <td>10</td> <!-- Touchdowns -->
-      <td>1</td> <!-- Interceptions-->
-      <td>836</td> <!-- Yards -->
-      <td>2.27%</td> <!-- Interception Percent -->
-      <td>0</td> <!-- Sacks Taken -->
-      <td>22.5</td> <!-- Yards/Attempt -->
-      <td>1</td> <!-- Games Played -->
-    </tr> <!-- {doctorthom} -->
-    <tr>
-      <td>swagff</td> <!-- Player Name -->
-      <td>114.35</td> <!-- QB Rating -->
-      <td>13</td> <!-- Completions -->
-      <td>18</td> <!-- Attempts --> 
-      <td>72.2</td> <!-- Completion Percent -->
-      <td>5</td> <!-- Touchdowns -->
-      <td>2</td> <!-- Interceptions-->
-      <td>425</td> <!-- Yards -->
-      <td>11.1</td> <!-- Interception Percent -->
-      <td>2</td> <!-- Sacks Taken -->
-      <td>23.6</td> <!-- Yards/Attempt -->
-      <td>1</td> <!-- Games Played -->
-    </tr> <!-- {playerName} -->
-     <tr>
-      <td>privacied</td> <!-- Player Name -->
-      <td>105.45</td> <!-- QB Rating -->
-      <td>16</td> <!-- Completions -->
-      <td>26</td> <!-- Attempts --> 
-      <td>61.5</td> <!-- Completion Percent -->
-      <td>5</td> <!-- Touchdowns -->
-      <td>3</td> <!-- Interceptions-->
-      <td>433</td> <!-- Yards -->
-      <td>11.53</td> <!-- Interception Percent -->
-      <td>0</td> <!-- Sacks Taken -->
-      <td>16.65</td> <!-- Yards/Attempt -->
-      <td>1</td> <!-- Games Played -->
-    </tr> <!-- {playerName} -->
-     <tr>
-      <td>robogamer</td> <!-- Player Name -->
-      <td>89.88</td> <!-- QB Rating -->
-      <td>9</td> <!-- Completions -->
-      <td>21</td> <!-- Attempts --> 
-      <td>42.9</td> <!-- Completion Percent -->
-      <td>5</td> <!-- Touchdowns -->
-      <td>4</td> <!-- Interceptions-->
-      <td>321</td> <!-- Yards -->
-      <td>19.0</td> <!-- Interception Percent -->
-      <td>1</td> <!-- Sacks Taken -->
-      <td>15.28</td> <!-- Yards/Attempt -->
-      <td>1</td> <!-- Games Played -->
-    </tr> <!-- {playerName} -->
-     <tr>
-      <td>kayden</td> <!-- Player Name -->
-      <td>87.25</td> <!-- QB Rating -->
-      <td>17</td> <!-- Completions -->
-      <td>41</td> <!-- Attempts --> 
-      <td>41.5</td> <!-- Completion Percent -->
-      <td>5</td> <!-- Touchdowns -->
-      <td>8</td> <!-- Interceptions-->
-      <td>498</td> <!-- Yards -->
-      <td>19.51</td> <!-- Interception Percent -->
-      <td>1</td> <!-- Sacks Taken -->
-      <td>12.14</td> <!-- Yards/Attempt -->
-      <td>1</td> <!-- Games Played -->
-    </tr> <!-- {playerName} -->
-     <tr>
-      <td>bsstacks</td> <!-- Player Name -->
-      <td>85.29</td> <!-- QB Rating -->
-      <td>13</td> <!-- Completions -->
-      <td>33</td> <!-- Attempts --> 
-      <td>39.4</td> <!-- Completion Percent -->
-      <td>4</td> <!-- Touchdowns -->
-      <td>6</td> <!-- Interceptions-->
-      <td>399</td> <!-- Yards -->
-      <td>18.18</td> <!-- Interception Percent -->
-      <td>0</td> <!-- Sacks Taken -->
-      <td>12.09</td> <!-- Yards/Attempt -->
-      <td>1</td> <!-- Games Played -->
-    </tr> <!-- {playerName} -->
-    <tr>
-      <td>wocky</td> <!-- Player Name -->
-      <td>80.03</td> <!-- QB Rating -->
-      <td>9</td> <!-- Completions -->
-      <td>29</td> <!-- Attempts --> 
-      <td>31.0</td> <!-- Completion Percent -->
-      <td>6</td> <!-- Touchdowns -->
-      <td>4</td> <!-- Interceptions-->
-      <td>449</td> <!-- Yards -->
-      <td>13.79</td> <!-- Interception Percent -->
-      <td>1</td> <!-- Sacks Taken -->
-      <td>15.48</td> <!-- Yards/Attempt -->
-      <td>1</td> <!-- Games Played -->
-    </tr> <!-- {playerName} -->
-     <tr>
-      <td>chrisbugg</td> <!-- Player Name -->
-      <td>79.67</td> <!-- QB Rating -->
-      <td>27</td> <!-- Completions -->
-      <td>66</td> <!-- Attempts --> 
-      <td>40.9</td> <!-- Completion Percent -->
-      <td>6</td> <!-- Touchdowns -->
-      <td>5</td> <!-- Interceptions-->
-      <td>709</td> <!-- Yards -->
-      <td>7.57</td> <!-- Interception Percent -->
-      <td>2</td> <!-- Sacks Taken -->
-      <td>10.74</td> <!-- Yards/Attempt -->
-      <td>2</td> <!-- Games Played -->
-    </tr> <!-- {playerName} -->
-  
-    <tr>
-      <td>mayor</td> <!-- Player Name -->
-      <td>40.63</td> <!-- QB Rating -->
-      <td>21</td> <!-- Completions -->
-      <td>52</td> <!-- Attempts --> 
-      <td>40.4</td> <!-- Completion Percent -->
-      <td>1</td> <!-- Touchdowns -->
-      <td>10</td> <!-- Interceptions-->
-      <td>475</td> <!-- Yards -->
-      <td>19.23</td> <!-- Interception Percent -->
-      <td>3</td> <!-- Sacks Taken -->
-      <td>9.13</td> <!-- Yards/Attempt -->
-      <td>1</td> <!-- Games Played -->
-    </tr> <!-- {playerName} -->
-  </tbody>
-<script>
-  /*
- *   This content is licensed according to the W3C Software License at
- *   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
- *
- *   File:   sortable-table.js
- *
- *   Desc:   Adds sorting to a HTML data table that implements ARIA Authoring Practices
- */
+    <h1 style="color: white;">UFA S3 Stats</h1>
 
-'use strict';
+    <div style="background-color: #545353; width: 90%; height: 30px; margin: auto; font-family: 'Play';"
+      class="buttonholder">
 
-class SortableTable {
-  constructor(tableNode) {
-    this.tableNode = tableNode;
+      <button class="selectedbutton">QB</button><button href="/league/stats/wr">WR</button><button href="/league/stats/db">DB</button><button href="/league/stats/de">DE</button>
+    </div>
 
-    this.columnHeaders = tableNode.querySelectorAll('thead th');
+    <div class="table-wrap">
+      <table class="sortable" id="table">
+        <caption>
 
-    this.sortColumns = [];
+        </caption>
+        <script>
+          function searchTable() {
+            // Declare variables
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("table");
+            tr = table.getElementsByTagName("tr");
 
-    for (var i = 0; i < this.columnHeaders.length; i++) {
-      var ch = this.columnHeaders[i];
-      var buttonNode = ch.querySelector('button');
-      if (buttonNode) {
-        this.sortColumns.push(i);
-        buttonNode.setAttribute('data-column-index', i);
-        buttonNode.addEventListener('click', this.handleClick.bind(this));
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+              td = tr[i].getElementsByTagName("td")[0];
+              if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  tr[i].style.display = "";
+                } else {
+                  tr[i].style.display = "none";
+                }
+              }
+            }
+          }
+        </script>
+        <style></style>
+        <thead>
+          <tr>
+            <input type="text" id="myInput" onkeyup="searchTable()" placeholder="Search for names.."
+              style="border: none; background-color: #2f3030; width: 90%; margin-left: 5%; color: white;">
+            <th>
+              <button>
+                Player
+                <span aria-hidden="true"></span>
+              </button>
+
+            <th class="num" aria-sort="descending">
+              <button>
+                QBR
+                <span aria-hidden="true"></span>
+              </button>
+
+            <th class="num">
+              <button>
+                Cmp
+                <span aria-hidden="true"></span>
+              </button>
+
+            <th class="num">
+              <button>
+                Att
+                <span aria-hidden="true"></span>
+              </button>
+
+            <th class="num">
+              <button>
+                Cmp%
+                <span aria-hidden="true"></span>
+              </button>
+
+            <th class="num">
+              <button>
+                TD
+                <span aria-hidden="true"></span>
+              </button>
+
+            <th class="num">
+              <button>
+                INT
+                <span aria-hidden="true"></span>
+              </button>
+
+            <th class="num">
+              <button>
+                Yds
+                <span aria-hidden="true"></span>
+              </button>
+
+            <th class="num">
+              <button>
+                INT%
+                <span aria-hidden="true"></span>
+              </button>
+
+            <th class="num">
+              <button>
+                Sk
+                <span aria-hidden="true"></span>
+              </button>
+
+            <th class="num">
+              <button>
+                Y/A
+                <span aria-hidden="true"></span>
+              </button>
+
+            <th class="noSort">GP</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <tr>
+            <td></td> <!-- Player Name -->
+            <td></td> <!-- QB Rating -->
+            <td></td> <!-- Completions -->
+            <td>-</td> <!-- Attempts -->
+            <td>-</td> <!-- Completion Percent -->
+            <td>-</td> <!-- Touchdowns -->
+            <td>-</td> <!-- Interceptions-->
+            <td>-</td> <!-- Yards -->
+            <td>-</td> <!-- Interception Percent -->
+            <td>-</td> <!-- Sacks Taken -->
+            <td>-</td> <!-- Yards/Attempt -->
+            <td>-</td> <!-- Games Played -->
+          </tr>
+        </tbody>
+        <script>
+          /* TABLE SORTER */
+
+          'use strict';
+
+          class SortableTable {
+            constructor(tableNode) {
+              this.tableNode = tableNode;
+
+              this.columnHeaders = tableNode.querySelectorAll('thead th');
+
+              this.sortColumns = [];
+
+              for (var i = 0; i < this.columnHeaders.length; i++) {
+                var ch = this.columnHeaders[i];
+                var buttonNode = ch.querySelector('button');
+                if (buttonNode) {
+                  this.sortColumns.push(i);
+                  buttonNode.setAttribute('data-column-index', i);
+                  buttonNode.addEventListener('click', this.handleClick.bind(this));
+                }
+              }
+
+              this.optionCheckbox = document.querySelector(
+                'input[type="checkbox"][value="show-unsorted-icon"]'
+              );
+
+              if (this.optionCheckbox) {
+                this.optionCheckbox.addEventListener(
+                  'change',
+                  this.handleOptionChange.bind(this)
+                );
+                if (this.optionCheckbox.checked) {
+                  this.tableNode.classList.add('show-unsorted-icon');
+                }
+              }
+            }
+
+            setColumnHeaderSort(columnIndex) {
+              if (typeof columnIndex === 'string') {
+                columnIndex = parseInt(columnIndex);
+              }
+
+              for (var i = 0; i < this.columnHeaders.length; i++) {
+                var ch = this.columnHeaders[i];
+                var buttonNode = ch.querySelector('button');
+                if (i === columnIndex) {
+                  var value = ch.getAttribute('aria-sort');
+                  if (value === 'descending') {
+                    ch.setAttribute('aria-sort', 'ascending');
+                    this.sortColumn(
+                      columnIndex,
+                      'ascending',
+                      ch.classList.contains('num')
+                    );
+                  } else {
+                    ch.setAttribute('aria-sort', 'descending');
+                    this.sortColumn(
+                      columnIndex,
+                      'descending',
+                      ch.classList.contains('num')
+                    );
+                  }
+                } else {
+                  if (ch.hasAttribute('aria-sort') && buttonNode) {
+                    ch.removeAttribute('aria-sort');
+                  }
+                }
+              }
+            }
+
+            sortColumn(columnIndex, sortValue, isNumber) {
+              function compareValues(a, b) {
+                if (sortValue === 'ascending') {
+                  if (a.value === b.value) {
+                    return 0;
+                  } else {
+                    if (isNumber) {
+                      return a.value - b.value;
+                    } else {
+                      return a.value < b.value ? -1 : 1;
+                    }
+                  }
+                } else {
+                  if (a.value === b.value) {
+                    return 0;
+                  } else {
+                    if (isNumber) {
+                      return b.value - a.value;
+                    } else {
+                      return a.value > b.value ? -1 : 1;
+                    }
+                  }
+                }
+              }
+
+              if (typeof isNumber !== 'boolean') {
+                isNumber = false;
+              }
+
+              var tbodyNode = this.tableNode.querySelector('tbody');
+              var rowNodes = [];
+              var dataCells = [];
+
+              var rowNode = tbodyNode.firstElementChild;
+
+              var index = 0;
+              while (rowNode) {
+                rowNodes.push(rowNode);
+                var rowCells = rowNode.querySelectorAll('th, td');
+                var dataCell = rowCells[columnIndex];
+
+                var data = {};
+                data.index = index;
+                data.value = dataCell.textContent.toLowerCase().trim();
+                if (isNumber) {
+                  data.value = parseFloat(data.value);
+                }
+                dataCells.push(data);
+                rowNode = rowNode.nextElementSibling;
+                index += 1;
+              }
+
+              dataCells.sort(compareValues);
+
+              // remove rows
+              while (tbodyNode.firstChild) {
+                tbodyNode.removeChild(tbodyNode.lastChild);
+              }
+
+              // add sorted rows
+              for (var i = 0; i < dataCells.length; i += 1) {
+                tbodyNode.appendChild(rowNodes[dataCells[i].index]);
+              }
+            }
+
+            /* EVENT HANDLERS */
+
+            handleClick(event) {
+              var tgt = event.currentTarget;
+              this.setColumnHeaderSort(tgt.getAttribute('data-column-index'));
+            }
+
+            handleOptionChange(event) {
+              var tgt = event.currentTarget;
+
+              if (tgt.checked) {
+                this.tableNode.classList.add('show-unsorted-icon');
+              } else {
+                this.tableNode.classList.remove('show-unsorted-icon');
+              }
+            }
+          }
+
+          // Initialize sortable table buttons
+          window.addEventListener('load', function () {
+            var sortableTables = document.querySelectorAll('table.sortable');
+            for (var i = 0; i < sortableTables.length; i++) {
+              new SortableTable(sortableTables[i]);
+            }
+          });
+
+        </script>
+      </table>
+    </div>
+    <br>
+    <br>
+    
+    <style>
+      .xcont button {
+        font-family: 'Play';
+        transition: all 500ms;
+        padding: 10px;
+        border: gray 5px solid;
       }
-    }
 
-    this.optionCheckbox = document.querySelector(
-      'input[type="checkbox"][value="show-unsorted-icon"]'
-    );
-
-    if (this.optionCheckbox) {
-      this.optionCheckbox.addEventListener(
-        'change',
-        this.handleOptionChange.bind(this)
-      );
-      if (this.optionCheckbox.checked) {
-        this.tableNode.classList.add('show-unsorted-icon');
+      .xcont button:hover {
+        cursor: pointer;
+        background-color: #ddd;
+        transition: all 500ms;
       }
-    }
-  }
 
-  setColumnHeaderSort(columnIndex) {
-    if (typeof columnIndex === 'string') {
-      columnIndex = parseInt(columnIndex);
-    }
-
-    for (var i = 0; i < this.columnHeaders.length; i++) {
-      var ch = this.columnHeaders[i];
-      var buttonNode = ch.querySelector('button');
-      if (i === columnIndex) {
-        var value = ch.getAttribute('aria-sort');
-        if (value === 'descending') {
-          ch.setAttribute('aria-sort', 'ascending');
-          this.sortColumn(
-            columnIndex,
-            'ascending',
-            ch.classList.contains('num')
-          );
-        } else {
-          ch.setAttribute('aria-sort', 'descending');
-          this.sortColumn(
-            columnIndex,
-            'descending',
-            ch.classList.contains('num')
-          );
-        }
-      } else {
-        if (ch.hasAttribute('aria-sort') && buttonNode) {
-          ch.removeAttribute('aria-sort');
-        }
+      .xcont {
+        left: 0;
+        bottom: 50px;
+        width: 100%;
+        text-align: center;
       }
-    }
-  }
 
-  sortColumn(columnIndex, sortValue, isNumber) {
-    function compareValues(a, b) {
-      if (sortValue === 'ascending') {
-        if (a.value === b.value) {
-          return 0;
-        } else {
-          if (isNumber) {
-            return a.value - b.value;
-          } else {
-            return a.value < b.value ? -1 : 1;
+      .submitbuttoner {
+        font-family: 'Play';
+        transition: all 500ms;
+        padding: 10px;
+        border: gray 5px solid;
+      }
+
+      .submitbuttoner:hover {
+        cursor: pointer;
+        background-color: #ddd;
+        transition: all 500ms;
+      }
+    </style>
+    <footer id="x" class="xcont">
+      <button onclick="newRow()">New Row</button><button onclick="killRow()">Remove Row</button><button
+        onclick="toggleEditor()" id="editbutton">Start Editing</button><button onclick="copySource()">Copy
+        Edits</button>
+      </form>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+
+    <script>
+      // Dead script - not used anymore
+
+
+      /* Add "https://api.ipify.org?format=json" to 
+      get the IP Address of user*/
+      $(document).ready(() => {
+        $.getJSON("https://api.ipify.org?format=json",
+          function (data) {
+
+            // Displayin IP address on screen
+            $("#gfg").html(data.ip);
+          })
+      });
+    </script>
+    <script>
+
+      const newestRow = document.querySelectorAll("table.sortable tbody td");
+
+      console.log(newestRow);
+
+      function killRow() {
+        table.lastChild.remove();
+      }
+
+      var table = document.getElementById("tbody");
+      function newRow() {
+        var row = document.createElement("tr")
+
+        for (var i = 0; i < 12; i++) {
+          var newcell = document.createElement("td")
+          row.appendChild(newcell)
+          if (i == 11) {
+            var placeholder = document.createTextNode("1");
+            newcell.appendChild(placeholder);
           }
         }
-      } else {
-        if (a.value === b.value) {
-          return 0;
+
+        table.appendChild(row)
+      }
+
+      function copySource() {
+        let string =
+          '<table class="sortable" id="table"> ' +
+          document.getElementById("table").innerHTML + " </table>";
+        navigator.clipboard.writeText(string);
+
+
+      }
+
+      function toggleEditor() {
+        var button = document.getElementById("editbutton");
+        if (document.designMode == "on") {
+          document.designMode = "off";
+          button.innerHTML = "Start Editing";
         } else {
-          if (isNumber) {
-            return b.value - a.value;
-          } else {
-            return a.value > b.value ? -1 : 1;
-          }
+          document.designMode = "on";
+          button.innerHTML = "Stop Editing";
         }
       }
-    }
+      const queryString = window.location.search;
+      console.log(queryString);
+      const urlParams = new URLSearchParams(queryString);
 
-    if (typeof isNumber !== 'boolean') {
-      isNumber = false;
-    }
-
-    var tbodyNode = this.tableNode.querySelector('tbody');
-    var rowNodes = [];
-    var dataCells = [];
-
-    var rowNode = tbodyNode.firstElementChild;
-
-    var index = 0;
-    while (rowNode) {
-      rowNodes.push(rowNode);
-      var rowCells = rowNode.querySelectorAll('th, td');
-      var dataCell = rowCells[columnIndex];
-
-      var data = {};
-      data.index = index;
-      data.value = dataCell.textContent.toLowerCase().trim();
-      if (isNumber) {
-        data.value = parseFloat(data.value);
+      const adminMode = urlParams.get('editor')
+      var x = document.getElementById("x");
+      var toggle = document.getElementById("statmode")
+      
+      if (adminMode == "true") {
+        x.style.display = "block";
+        toggle.textContent = "Exit Stat Mode"
+        toggle.href = "?"
+      } else {
+        x.style.display = "none";
       }
-      dataCells.push(data);
-      rowNode = rowNode.nextElementSibling;
-      index += 1;
-    }
+    </script>
+    <script src="/links.js"></script>
 
-    dataCells.sort(compareValues);
 
-    // remove rows
-    while (tbodyNode.firstChild) {
-      tbodyNode.removeChild(tbodyNode.lastChild);
-    }
+    <script>
+      function routeLinks() {
+        let homelinks = document.getElementsByClassName("homelink");
+        let qblinks = document.getElementsByClassName("qblink");
+        let wrlinks = document.getElementsByClassName("wrlink");
+        let dblinks = document.getElementsByClassName("dblink");
+        let delinks = document.getElementsByClassName("delink");
+        let standingslink = document.getElementsByClassName("standingslink")
 
-    // add sorted rows
-    for (var i = 0; i < dataCells.length; i += 1) {
-      tbodyNode.appendChild(rowNodes[dataCells[i].index]);
-    }
-  }
+        for (var i = 0; i < homelinks.length; i++) {
+          homelinks[i].href = Links.home;
+        }
+        for (var i = 0; i < qblinks.length; i++) {
+          qblinks[i].href = Links.qbstats;
+        }
+        for (var i = 0; i < wrlinks.length; i++) {
+          wrlinks[i].href = Links.wrstats
+        }
+        for (var i = 0; i < dblinks.length; i++) {
+          dblinks[i].href = Links.dbstats
+        }
+        for (var i = 0; i < delinks.length; i++) {
+          delinks[i].href = Links.destats
+        }
+        for (var i = 0; i < standingslink.length; i++) {
+          standingslink[i].href = Links.standings
+        }
+      }
 
-  /* EVENT HANDLERS */
+      routeLinks();
+    </script>
+    <style>
+      @keyframes dynam {
+        from {
+          background-color;
+          : #005aa8;
+        }
 
-  handleClick(event) {
-    var tgt = event.currentTarget;
-    this.setColumnHeaderSort(tgt.getAttribute('data-column-index'));
-  }
+        to {
+          background-color: #00fffe;
+        }
+      }
 
-  handleOptionChange(event) {
-    var tgt = event.currentTarget;
-
-    if (tgt.checked) {
-      this.tableNode.classList.add('show-unsorted-icon');
-    } else {
-      this.tableNode.classList.remove('show-unsorted-icon');
-    }
-  }
-}
-
-// Initialize sortable table buttons
-window.addEventListener('load', function () {
-  var sortableTables = document.querySelectorAll('table.sortable');
-  for (var i = 0; i < sortableTables.length; i++) {
-    new SortableTable(sortableTables[i]);
-  }
-});
-
-</script>
-</table></div>
-        
-  
-</body>
+      .gra {
+        animation: dynam 5s linear 2s infinite alternate;
+        background-color: #005aa8;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </body>
 
 </html>
+</area>
