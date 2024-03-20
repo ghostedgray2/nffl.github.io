@@ -5,6 +5,38 @@
 <head>
   <style>
     html {
+  height: 100%;
+  width: 100%;
+}
+
+header b {
+  background: rgb(0,255,254);
+  background: -webkit-linear-gradient(#00fffe, #039dfc);
+  background-clip:content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 200ms;
+}
+
+header b:hover, header img:hover {
+  transform: translate(0px,-2px);
+  transition: all 200ms;
+}
+header b:active, header img:active {
+  transform: translate(0px,2px);
+  transition: all 200ms;
+}
+
+header img {
+  opacity: 1;
+   background: -webkit-linear-gradient(#00fffe, #039dfc);
+  transition: all 200ms;
+  transform: translate(0px,2px);
+}
+
+    </style>
+  <style>
+    html {
       height: 100%;
       width: 100%;
       padding: 0;
