@@ -406,7 +406,7 @@
     <div style="background-color: #545353; width: 90%; height: 30px; margin: auto; font-family: 'Play';"
       class="buttonholder">
 
-      <button class="selectedbutton">QB</button><button href="/league/stats/wr">WR</button><button href="/league/stats/db">DB</button><button href="/league/stats/de">DE</button>
+      <button href="/league/stats/qb">QB</button><button class="selectedbutton">WR</button><button href="/league/stats/db">DB</button><button href="/league/stats/de">DE</button>
     </div>
 
     <div class="table-wrap">
@@ -450,25 +450,19 @@
 
             <th class="num" aria-sort="descending">
               <button>
-                QBR
+                Rec
                 <span aria-hidden="true"></span>
               </button>
 
             <th class="num">
               <button>
-                Cmp
+                Tgt
                 <span aria-hidden="true"></span>
               </button>
 
             <th class="num">
               <button>
-                Att
-                <span aria-hidden="true"></span>
-              </button>
-
-            <th class="num">
-              <button>
-                Cmp%
+                Catch%
                 <span aria-hidden="true"></span>
               </button>
 
@@ -480,7 +474,7 @@
 
             <th class="num">
               <button>
-                INT
+                IntA
                 <span aria-hidden="true"></span>
               </button>
 
@@ -492,19 +486,13 @@
 
             <th class="num">
               <button>
-                INT%
+                Yds/C
                 <span aria-hidden="true"></span>
               </button>
 
             <th class="num">
               <button>
-                Sk
-                <span aria-hidden="true"></span>
-              </button>
-
-            <th class="num">
-              <button>
-                Y/A
+                YAC
                 <span aria-hidden="true"></span>
               </button>
 
@@ -514,16 +502,14 @@
         <tbody id="tbody">
           <tr>
             <td></td> <!-- Player Name -->
-            <td></td> <!-- QB Rating -->
-            <td></td> <!-- Completions -->
-            <td>-</td> <!-- Attempts -->
-            <td>-</td> <!-- Completion Percent -->
+            <td></td> <!-- Receptions -->
+            <td></td> <!-- Targets -->
+            <td>-</td> <!-- Catch % -->
             <td>-</td> <!-- Touchdowns -->
-            <td>-</td> <!-- Interceptions-->
+            <td>-</td> <!-- Interceptions Allowed -->
             <td>-</td> <!-- Yards -->
-            <td>-</td> <!-- Interception Percent -->
-            <td>-</td> <!-- Sacks Taken -->
-            <td>-</td> <!-- Yards/Attempt -->
+            <td>-</td> <!-- Yards per Catch -->
+            <td>-</td> <!-- Yards after Catch -->
             <td>-</td> <!-- Games Played -->
           </tr>
         </tbody>
@@ -694,7 +680,7 @@
     </div>
     <br>
     <br>
-    
+
     <style>
       .xcont button {
         font-family: 'Play';
@@ -805,7 +791,7 @@
       const adminMode = urlParams.get('editor')
       var x = document.getElementById("x");
       var toggle = document.getElementById("statmode")
-      
+
       if (adminMode == "true") {
         x.style.display = "block";
         toggle.textContent = "Exit Stat Mode"
