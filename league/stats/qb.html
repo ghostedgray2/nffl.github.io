@@ -284,18 +284,10 @@
     <header>
       <a class="homelink"> <img src="https://i.ibb.co/5kg3xCQ/ufaframe.png"
           style="aspect-ratio: 64 / 25; width: auto; height: 30px; text-align: center; margin: auto; vertical-align: middle; margin-top: -10px; "></a>
-      <div class="dropdown">
-        <a href="index.html" class="dropbtn">
+        <a href="ufa-ff.github.io/league/stats/qb" class="dropbtn">
           <b>Stats</b></a>
-        <div class="dropdown-content">
-          <a href="qb.html" class="qblink">QB</a>
-          <a href="/league/stats/wr" class="wrlink">WR</a>
-          <a href="db.html" class="dblink">DB</a>
-          <a href="de.html" class="delink">DE</a>
-        </div>
-      </div>
 
-      <a href="standings.html" class="standingslink">
+      <a href="/league/stats/standings">
         <b>Standings</b>
       </a>
       <div class="dropdown" style="float: right; margin-right: 30px;">
@@ -314,7 +306,7 @@
   <script>
 
     // initialization
-
+    loadHeader();
 
   </script>
   <script src="/script.js"></script>
@@ -694,7 +686,7 @@
     </div>
     <br>
     <br>
-    
+
     <style>
       .xcont button {
         font-family: 'Play';
@@ -805,7 +797,7 @@
       const adminMode = urlParams.get('editor')
       var x = document.getElementById("x");
       var toggle = document.getElementById("statmode")
-      
+
       if (adminMode == "true") {
         x.style.display = "block";
         toggle.textContent = "Exit Stat Mode"
