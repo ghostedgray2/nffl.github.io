@@ -3,6 +3,10 @@
 <html>
 
 <head>
+  <script src="/globalHeader.js"></script>
+  <script>
+    loadHeader();
+  </script>
   <style>
     html {
       height: 100%;
@@ -501,13 +505,13 @@
         </thead>
         <tbody id="tbody">
           <tr>
-            <td></td> <!-- Player Name -->
-            <td></td> <!-- Receptions -->
-            <td></td> <!-- Targets -->
+            <td>ghostedgray</td> <!-- Player Name -->
+            <td>32</td> <!-- Receptions -->
+            <td>54</td> <!-- Targets -->
             <td>-</td> <!-- Catch % -->
             <td>-</td> <!-- Touchdowns -->
             <td>-</td> <!-- Interceptions Allowed -->
-            <td>-</td> <!-- Yards -->
+            <td>546</td> <!-- Yards -->
             <td>-</td> <!-- Yards per Catch -->
             <td>-</td> <!-- Yards after Catch -->
             <td>-</td> <!-- Games Played -->
@@ -717,8 +721,8 @@
     </style>
     <footer id="x" class="xcont">
       <button onclick="newRow()">New Row</button><button onclick="killRow()">Remove Row</button><button
-        onclick="toggleEditor()" id="editbutton">Start Editing</button><button onclick="copySource()">Copy
-        Edits</button>
+      onclick="toggleEditor()" id="editbutton">Start Editing</button><button onclick="copySource()">Copy
+      Edits</button>
       </form>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
@@ -741,6 +745,37 @@
     </script>
     <script>
 
+      window.onload = function doMath() {
+        // Declare variables
+        var input, filter, tbl, tr, td, txtValue, rec, tgt, num, tie;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        tbl = document.getElementById("tbody");
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (let i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          let tdw = tr[i].getElementsByTagName("td")[1];
+          let tdl = tr[i].getElementsByTagName("td")[2];
+          let tdp = tr[i].getElementsByTagName("td")[3];
+          let yd = tr[i].getElementsByTagName("td")[6];
+          let ypc = tr[i].getElementsByTagName("td")[7];
+
+          rec = parseInt(tdw.textContent);
+          tgt = parseInt(tdl.textContent);
+          yd = parseInt(yd.textContent);
+          console.log(Math.floor(rec + tgt));
+          num = rec/(rec+tgt);
+          numm = num.toFixed(3)
+          tdp.textContent = (numm*100) + "%"
+
+          ypc.textContent = Math.floor(yd/rec);
+        }
+      };
+
+
+      
       const newestRow = document.querySelectorAll("table.sortable tbody td");
 
       console.log(newestRow);

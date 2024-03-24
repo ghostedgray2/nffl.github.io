@@ -9,36 +9,38 @@
   </script>
   <style>
     html {
-  height: 100%;
-  width: 100%;
-}
+      height: 100%;
+      width: 100%;
+    }
 
-header b {
-  background: rgb(0,255,254);
-  background: -webkit-linear-gradient(#00fffe, #039dfc);
-  background-clip:content-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 200ms;
-}
+    header b {
+      background: rgb(0, 255, 254);
+      background: -webkit-linear-gradient(#00fffe, #039dfc);
+      background-clip: content-box;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 200ms;
+    }
 
-header b:hover, header img:hover {
-  transform: translate(0px,-2px);
-  transition: all 200ms;
-}
-header b:active, header img:active {
-  transform: translate(0px,2px);
-  transition: all 200ms;
-}
+    header b:hover,
+    header img:hover {
+      transform: translate(0px, -2px);
+      transition: all 200ms;
+    }
 
-header img {
-  opacity: 1;
-   background: -webkit-linear-gradient(#00fffe, #039dfc);
-  transition: all 200ms;
-  transform: translate(0px,2px);
-}
+    header b:active,
+    header img:active {
+      transform: translate(0px, 2px);
+      transition: all 200ms;
+    }
 
-    </style>
+    header img {
+      opacity: 1;
+      background: -webkit-linear-gradient(#00fffe, #039dfc);
+      transition: all 200ms;
+      transform: translate(0px, 2px);
+    }
+  </style>
   <style>
     html {
       height: 100%;
@@ -438,13 +440,7 @@ header img {
   </head>
 
   <body>
-    <h1 style="color: white;">UFA S3 Stats</h1>
-
-    <div style="background-color: #545353; width: 90%; height: 30px; margin: auto; font-family: 'Play';"
-      class="buttonholder">
-
-      <button href="/league/stats/qb">QB</button><button href="/league/stats/wr">WR</button><button class="selectedbutton">DB</button><button href="/league/stats/de">DE</button>
-    </div>
+    <h1 style="color: white;">UFA S3 Team Standings</h1>
 
     <div class="table-wrap">
       <table class="sortable" id="table">
@@ -481,43 +477,49 @@ header img {
               style="border: none; background-color: #2f3030; width: 90%; margin-left: 5%; color: white;">
             <th>
               <button>
-                Player
+                Team
                 <span aria-hidden="true"></span>
               </button>
 
             <th class="num" aria-sort="descending">
               <button>
-                Int
+                W
                 <span aria-hidden="true"></span>
               </button>
 
             <th class="num" aria-sort="descending">
               <button>
-                Tgt
+                L
                 <span aria-hidden="true"></span>
               </button>
 
             <th class="num">
               <button>
-                Deny%
+                T
                 <span aria-hidden="true"></span>
               </button>
 
             <th class="num">
               <button>
-                Swats
+                %
                 <span aria-hidden="true"></span>
               </button>
 
             <th class="num">
               <button>
-                CompA
+                FFW
                 <span aria-hidden="true"></span>
               </button>
 
             <th class="num">
               <button>
-                Pick6
+                FFL
+                <span aria-hidden="true"></span>
+              </button>
+
+            <th class="num">
+              <button>
+                FFT
                 <span aria-hidden="true"></span>
               </button>
 
@@ -526,14 +528,37 @@ header img {
         </thead>
         <tbody id="tbody">
           <tr>
-            <td></td> <!-- Player Name -->
-            <td>2</td> <!-- Interceptions -->
-            <td>64</td> <!-- Targets -->
-            <td>-</td> <!-- Incompletion % -->
-            <td>-</td> <!-- Swats -->
-            <td>24</td> <!-- Completions Allowed -->
-            <td>-</td> <!-- Pick 6s -->
-            <td>-</td> <!-- Games Played -->
+            <td></td> <!-- Team Name -->
+            <td>1</td> <!-- Wins -->
+            <td>1</td> <!-- Losses -->
+            <td>0</td> <!-- Ties -->
+            <td></td> <!-- Win % -->
+            <td></td> <!-- FFWs -->
+            <td></td> <!-- FFLs -->
+            <td></td> <!-- FFTs -->
+            <td>1</td> <!-- Games Played -->
+          </tr>
+          <tr>
+            <td></td> <!-- Team Name -->
+            <td>5</td> <!-- Wins -->
+            <td>3</td> <!-- Losses -->
+            <td>0</td> <!-- Ties -->
+            <td></td> <!-- Win % -->
+            <td></td> <!-- FFWs -->
+            <td></td> <!-- FFLs -->
+            <td></td> <!-- FFTs -->
+            <td>1</td> <!-- Games Played -->
+          </tr>
+          <tr>
+            <td></td> <!-- Team Name -->
+            <td>2</td> <!-- Wins -->
+            <td>4</td> <!-- Losses -->
+            <td>0</td> <!-- Ties -->
+            <td></td> <!-- Win % -->
+            <td></td> <!-- FFWs -->
+            <td></td> <!-- FFLs -->
+            <td></td> <!-- FFTs -->
+            <td>1</td> <!-- Games Played -->
           </tr>
         </tbody>
         <script>
@@ -740,9 +765,8 @@ header img {
     </style>
     <footer id="x" class="xcont">
       <button onclick="newRow()">New Row</button><button onclick="killRow()">Remove Row</button><button
-        onclick="toggleEditor()" id="editbutton">Start Editing</button><button onclick="copySource()">Copy
-        Edits</button>
-      </form>
+      onclick="toggleEditor()" id="editbutton">Start Editing</button><button onclick="copySource()">Copy
+      Edits</button>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     </script>
@@ -764,31 +788,6 @@ header img {
     </script>
     <script>
 
-      window.onload = function doMath() {
-        // Declare variables
-        var input, filter, tbl, tr, td, txtValue, rec, tgt, num, tie;
-        input = document.getElementById("myInput");
-        filter = input.value.toUpperCase();
-        tbl = document.getElementById("tbody");
-        tr = table.getElementsByTagName("tr");
-
-        // Loop through all table rows, and hide those who don't match the search query
-        for (let i = 0; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td")[0];
-          let tdtgt = tr[i].getElementsByTagName("td")[2];
-          let tdcmpa = tr[i].getElementsByTagName("td")[5];
-          let tdp = tr[i].getElementsByTagName("td")[3];
-
-          tgt = parseInt(tdtgt.textContent);
-          cmpa = parseInt(tdcmpa.textContent);
-          num = (tgt-cmpa)/tgt;
-          numm = num.toFixed(3);
-          tdp.textContent = (numm*100) + "%"
-        }
-      };
-
-
-      
       const newestRow = document.querySelectorAll("table.sortable tbody td");
 
       console.log(newestRow);
@@ -813,6 +812,34 @@ header img {
         table.appendChild(row)
       }
 
+      window.onload = function doMath() {
+        // Declare variables
+        var input, filter, tbl, tr, td, txtValue, win, loss, num, tie;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        tbl = document.getElementById("tbody");
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (let i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          let tdw = tr[i].getElementsByTagName("td")[1];
+          let tdl = tr[i].getElementsByTagName("td")[2];
+          let tdt = tr[i].getElementsByTagName("td")[3];
+          let tdp = tr[i].getElementsByTagName("td")[4];
+          let gp = tr[i].getElementsByTagName("td")[8];
+
+          win = parseInt(tdw.textContent);
+          loss = parseInt(tdl.textContent);
+          tie = parseInt(tdt.textContent);
+          console.log(Math.floor(win + loss));
+          num = win/(win+loss);
+          numm = num.toFixed(3)
+          tdp.textContent = numm.slice(1)
+
+          gp.textContent = Math.floor(win + loss + tie);
+        }
+      };
       function copySource() {
         let string =
           '<table class="sortable" id="table"> ' +
@@ -846,6 +873,10 @@ header img {
         toggle.href = "?"
       } else {
         x.style.display = "none";
+      }
+
+      function exitStatMode() {
+        window.location = "?"
       }
     </script>
     <script src="/links.js"></script>

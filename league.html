@@ -1,165 +1,430 @@
-<!DOCTYPE html>
-<html>
+    <area id="html">
+    <!DOCTYPE html>
+    <html>
 
-<head>
-  <style>
-    html {
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  font-family: "Play";
-}
-body {
-}
-header {
-  width: 100%;
-  height: 50px;
-  background-color: #1c1c1c;
-  color: white;
-  padding: 5px;
-  vertical-align: auto;
-  line-height: 3rem;
-  padding-left: 25px;
-}
-b {
-  font-size: 25px;
-  text-decoration: none;
-  color: white;
-  display: inline-block;
-}
+    <head>
+      <script src="/globalHeader.js"></script>
+      <script>
+        loadHeader();
+      </script>
+      <style>
+        html {
+          height: 100%;
+          width: 100%;
+          padding: 0;
+          margin: 0;
+          font-family: "Play";
+          background-color: #1c1c1c;
+        }
 
-a {
-  text-decoration: none;
-}
-/* Dropdown Button */
-.dropbtn {
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
+        body {}
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
+        header {
+          width: 100%;
+          height: 50px;
+          background-color: #2e2d2d;
+          color: white;
+          padding: 5px;
+          vertical-align: auto;
+          line-height: 3rem;
+          padding-left: 25px;
+        }
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-}
+        b {
+          font-size: 25px;
+          text-decoration: none;
+          color: white;
+          display: inline-block;
+        }
 
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-}
+        a {
+          text-decoration: none;
+        }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+        /* Dropdown Button */
+        .dropbtn {
+          color: white;
+          padding: 16px;
+          font-size: 16px;
+          border: none;
+        }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f1f1f1;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          z-index: 1;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: bold;
+        }
 
-.gra {
-  background: rgb(28,28,28);
-  background: linear-gradient(180deg, rgba(28,28,28,1) 0%, rgba(28,28,28,1) 0%, rgba(0,212,255,0) 100%);
-  height: 2px;
-}
+        /* Links inside the dropdown */
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: bold;
+        }
 
-body {
-  margin: 0;
-  padding: 0;
-}
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+          background-color: #ddd;
+        }
 
-/* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
 
-/* Style the submit button with a specific background color etc */
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+        /* Change the background color of the dropdown button when the dropdown content is shown */
 
-/* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-  background-color: #45a049;
-}
+        .gra {
+          height: 1px;
+          width: 100%;
+        }
 
-/* Add a background color and some padding around the form */
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
+        body {
+          margin: 0;
+          padding: 0;
+        }
 
-th {
-  background-color: #ff5252;
-  color: white;
-}
+        /* Style inputs with type="text", select elements and textareas */
+        input[type=text],
+        select,
+        textarea {
+          width: 100%;
+          /* Full width */
+          padding: 12px;
+          /* Some padding */
+          border: 1px solid #ccc;
+          /* Gray border */
+          border-radius: 4px;
+          /* Rounded borders */
+          box-sizing: border-box;
+          /* Make sure that padding and width stays in place */
+          margin-top: 6px;
+          /* Add a top margin */
+          margin-bottom: 16px;
+          /* Bottom margin */
+          resize: vertical
+            /* Allow the user to vertically resize the textarea (not horizontally) */
+        }
 
-h1 {
-  padding-left: 10px;
-  text-align: center;
-}
-    </style
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Home | NFFL-FF2</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="nffl.png" href="/images/favicon.ico">
-</head>
-<body>
-  <header>
-    <a href="index (copy).html"><b>Home</b></a>
-    <div class="dropdown">
-      <a href="index (copy).html" class="dropbtn"><b>Stats</b></a>
-      <div class="dropdown-content">
-        <a href="qb.html">QB</a>
-        <a href="wr.html">WR</a>
-        <a href="#">DB</a>
-        <a href="#">DE</a>
-      </div>
-    </div>
-     <a href="standings.html"><b>Standings</b></a>
-  </header>
-  <header class="gra"></header>
-  <script src="script.js"></script>
-  
-</body>
+        /* Style the submit button with a specific background color etc */
+        input[type=submit] {
+          background-color: #04AA6D;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
 
-</html>
+        /* When moving the mouse over the submit button, add a darker green color */
+        input[type=submit]:hover {
+          background-color: #45a049;
+        }
+
+        /* Add a background color and some padding around the form */
+        .container {
+          border-radius: 5px;
+          background-color: #f2f2f2;
+          padding: 20px;
+        }
+
+        th {
+          color: black;
+          background-color: transparent;
+        }
+
+        h1 {
+          padding-left: 10px;
+          text-align: center;
+        }
+
+        .sr-only {
+          position: absolute;
+          top: -30em;
+        }
+
+        table.sortable td,
+        table.sortable th {
+          padding: 0.125em 0.25em;
+          width: 8em;
+          color: black;
+        }
+
+        table.sortable th {
+          font-weight: bold;
+          border-bottom: thin solid #888;
+          position: relative;
+        }
+
+
+
+        table.sortable th.no-sort {
+          padding-top: 0.35em;
+        }
+
+        table.sortable th:nth-child(5) {
+          width: 10em;
+        }
+
+        table.sortable th button {
+          position: absolute;
+          padding: 4px;
+          margin: 1px;
+          font-size: 100%;
+          font-weight: bold;
+          background: transparent;
+          border: none;
+          display: inline;
+          right: 0;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          width: 100%;
+          text-align: left;
+          outline: none;
+          cursor: pointer;
+          transition: all 250ms;
+        }
+
+        table.sortable th button span {
+          position: absolute;
+          right: 4px;
+        }
+
+        table.sortable th[aria-sort="descending"] span::after {
+          content: "▼";
+          color: black;
+          font-size: 100%;
+          top: 0;
+        }
+
+        table.sortable th[aria-sort="ascending"] span::after {
+          content: "▲";
+          color: currentcolor;
+          font-size: 100%;
+          top: 0;
+        }
+
+        table.show-unsorted-icon th:not([aria-sort]) button span::after {
+          content: "♢";
+          color: currentcolor;
+          font-size: 100%;
+          position: relative;
+          top: -3px;
+          left: -4px;
+        }
+
+        table.sortable td.num {
+          text-align: right;
+        }
+
+        table.sortable tbody tr:nth-child(odd) td {
+          background-color: #4a4a4a;
+          border-left: #545454 1px dotted;
+          border-right: #545454 1px dotted;
+        }
+
+        table.sortable tbody tr:nth-child(even) td {
+          background-color: #666666;
+          border-left: #545454 1px dotted;
+          border-right: #545454 1px dotted;
+        }
+
+        /* Focus and hover styling */
+
+        table.sortable th button:focus,
+        table.sortable th button:hover {
+          padding: 2px;
+          background-color:rgba(0, 0, 0, 0.2);
+          transition: all 250ms;
+        }
+
+        table.sortable th button:focus span,
+        table.sortable th button:hover span {
+          right: 2px;
+        }
+
+        table.sortable th:not([aria-sort]) button:focus span::after,
+        table.sortable th:not([aria-sort]) button:hover span::after {
+          color: currentcolor;
+          font-size: 100%;
+          top: 0;
+        }
+
+        table.sortable td {
+          border: 0.5px dashed #545454;
+          color: white
+        }
+      </style>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>QB Stats | UFA S3</title>
+      <link href="/style.css" rel="stylesheet" type="text/css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+      <blank id="enclosure">
+        <header>
+          <a class="homelink"> <img src="https://i.ibb.co/5kg3xCQ/ufaframe.png"
+              style="aspect-ratio: 64 / 25; width: auto; height: 30px; text-align: center; margin: auto; vertical-align: middle; margin-top: -10px; "></a>
+          <div class="dropdown">
+            <a href="index.html" class="dropbtn">
+              <b>Stats</b></a>
+            <div class="dropdown-content">
+              <a href="qb.html" class="qblink">QB</a>
+              <a href="/league/stats/wr" class="wrlink">WR</a>
+              <a href="db.html" class="dblink">DB</a>
+              <a href="de.html" class="delink">DE</a>
+            </div>
+          </div>
+
+          <a href="standings.html" class="standingslink">
+            <b>Standings</b>
+          </a>
+          <div class="dropdown" style="float: right; margin-right: 30px;">
+            <a href="index.html" class="dropbtn">
+              <b>︙</b></a>
+            <div class="dropdown-content" style="left: -140px;">
+              <a href="?editor=true" id="statmode">Stat Mode</a>
+            </div>
+          </div>
+        </header>
+        <header class="gra">
+        </header>
+      </blank>
+      <script src="/globalHeader.js"></script>
+
+      <script>
+
+        // initialization
+
+
+      </script>
+      <script src="/script.js"></script>
+      <script src="{% static 'js/sortable.js' %}"></script>
+      <link href="sortable.css" rel="stylesheet" />
+      <script src="sortable.js"></script>
+      <style>
+        table {
+          border-spacing: 0;
+          width: 90%;
+          border: 1px solid #ddd;
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        th {
+          cursor: pointer;
+        }
+
+        th,
+        td {
+          text-align: left;
+          padding: 16px;
+        }
+
+        tr:nth-child(even) {
+          background-color: #f2f2f2
+        }
+
+        thead {
+          color: black;
+          text-decoration: none;
+          background: linear-gradient(90deg, rgba(0,196,255,1) 0%, rgba(0,255,254,1) 100%);
+        }
+
+        table.sortable th button {
+          color: black;
+          text-decoration: none;
+          font-family: 'Play';
+          vertical-align: bottom;
+          padding: 2px;
+        }
+
+        th button {
+          text-decoration: none;
+          color: black;
+        }
+
+        .buttonholder>button {
+          color: white;
+          font-weight: bold;
+          vertical-align: middle;
+          height: 100%;
+          transition: all 250ms;
+          background-color: #373838;
+          border: none;
+          width: 25%;
+          text-shadow: 0px 0px 25px rgba(0, 0, 0, 1);
+          text-shadow: 0px 0px 25px rgba(0, 0, 0, 1),
+            0px 0px 25px rgba(0, 0, 0, 1);
+          overflow: hidden;
+        }
+
+        .buttonholder>button:hover {
+          background-color: #616161;
+          transition: all 250ms;
+          cursor: pointer;
+          font-size: 17px;
+        }
+
+        .selectedbutton {
+          background: rgb(0,196,255);
+          background: linear-gradient(90deg, rgba(0,196,255,1) 0%, rgba(0,255,254,1) 100%);
+          background-clip:content-box;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        .gra {
+          background: rgb(0,196,255);
+          background: linear-gradient(90deg, rgba(0,196,255,1) 0%, rgba(0,255,254,1) 100%);
+        }
+      </style>
+      </head>
+
+      <body>
+        
+        <style>
+          @keyframes dynam {
+            from {
+              background-color;
+              : #005aa8;
+            }
+
+            to {
+              background-color: #00fffe;
+            }
+          }
+
+          .gra {
+            animation: dynam 5s linear 2s infinite alternate;
+            background-color: #005aa8;
+          }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      </body>
+
+    </html>
+    </area>

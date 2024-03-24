@@ -3,6 +3,10 @@
 <html>
 
 <head>
+  <script src="/globalHeader.js"></script>
+  <script>
+    loadHeader();
+  </script>
   <style>
     html {
   height: 100%;
@@ -722,8 +726,8 @@ header img {
     </style>
     <footer id="x" class="xcont">
       <button onclick="newRow()">New Row</button><button onclick="killRow()">Remove Row</button><button
-        onclick="toggleEditor()" id="editbutton">Start Editing</button><button onclick="copySource()">Copy
-        Edits</button>
+      onclick="toggleEditor()" id="editbutton">Start Editing</button><button onclick="copySource()">Copy
+      Edits</button>
       </form>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
