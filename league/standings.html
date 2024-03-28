@@ -310,7 +310,7 @@
   </style>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>QB Stats | UFA S3</title>
+  <title>Standings | UFA S3</title>
   <link href="/style.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -469,6 +469,17 @@
               }
             }
           }
+        </script>
+        <script>
+          setTimeout(function(){
+            if (urlParams) {
+               if (urlParams.get("search")) {
+                 document.getElementById("myInput").value = urlParams.get("search");
+                 searchTable();
+               }
+             }
+          }, 200);
+         
         </script>
         <style></style>
         <thead>
@@ -724,6 +735,69 @@
           });
 
         </script>
+      </table>
+      <br>
+      <h1 style="color: white;"">Divisional Standings</h1>
+      <table class="sortable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>NFC-N</th>
+            <th>NFC-E</th>
+            <th>NFC-S</th>
+            <th>NFC-W</th>
+            <th>AFC-N</th>
+            <th>AFC-E</th>
+            <th>AFC-S</th>
+            <th>AFC-W</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
       </table>
     </div>
     <br>

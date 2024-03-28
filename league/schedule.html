@@ -281,7 +281,7 @@
   </style>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Home | UFA S3</title>
+  <title>Rulebook | UFA S3</title>
   <link href="/style.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -424,107 +424,70 @@
       animation: dynam 5s linear 2s infinite alternate;
       background-color: #005aa8;
     }
+
+    h1 {
+      color: white;
+    }
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <div style="display: inline-block; width: 100%; text-align: center; margin-top: 10px;"">
-      <div style=" width: 49%; float: left;">
-    <img src="ufa-alt.png"
-      style="aspect-ratio: 133/120; width: auto; height: 350px; filter: brightness(130%); margin-left: 20px; margin-top: 100px;">
-  </div>
-  <div style="width: 49%; float: right; margin-top: 85px; color: white;">
-    <h1>Welcome to UFA-FF S3</h1>
-    <a href="https://discord.gg/JAYZ29MJKb"><button class="ufabutton"><img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6cc3c481a15a141738_icon_clyde_white_RGB.png" class="discordbutton">Discord</button></a>
-    <br>
-    <br>
-    <a href="/league/stats/qb"><button class="ufabutton"><img class="statsbutton">Stats</button></a>
-    <br>
-    <br>
-    <a><button class="ufabutton"><img class="helpbutton">Support</button></a>
-  </div>
+  <h1>Week 1</h1>
+  <div class="rule">
+    <div id="team">
+      <a href="/league/standings.html?search=cardinals">
+    <span id="seed"></span>
+    <span id="name">ARI</span>
+      </a>
+    </div>
+    <div id="scorebug">
+      <span id="score">22 - 56</span>
+    </div>
+    <div id="team2">
+      <a href="/league/standings.html?search=cardinals">
+    <span id="seed"></span>
+    <span id="name">ARI</span>
+      </a>
+    </div>
   </div>
 </body>
 <style>
-  .ufabutton {
-    padding: 15px;
-    background: rgb(0, 255, 254);
-    background: -webkit-linear-gradient(#00fffe, #039dfc);
-    border: none;
-    border-radius: 5px;
-    font-family: 'Play';
-    font-size: 20px;
+  #scorebug {
+    color: white;
     font-weight: bold;
-    text-shadow: 0px 8px 12px rgba(0, 0, 0, 0.77);
-    color: #fff;
-    width: 350px;
-    transition: all 250ms;
+    font-size: 35px;
+    text-align: center;
+    margin: auto;
+  }
+  a {
+    color: inherit;
+  }
+  .rule {
+    padding: 20px;
+    color: white;
+    background-color: #333333;
+    width: 75%;
+    margin: auto;
+    margin-top: 20px;
+    max-height: 200px;
+    overflow:auto;
   }
 
-  .discordbutton {
-    aspect-ratio: 619/469;
-    width: auto;
-    height: 20px;
-    filter: drop-shadow(0px 15px 18px #000000);
-    translate: -100px 3px;
-    transition: all 1000ms;
+  .rule p {
+    
   }
-
-  .statsbutton {
-    aspect-ratio: 619/469;
-    width: auto;
-    height: 20px;
-    filter: drop-shadow(0px 15px 18px #000000);
-    translate: -110px 5px;
-    transition: all 1000ms;
-    fill: #fff;
-    content: url('/stats-bars_icon-icons.com_49979.png');
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
+  #team {
+    float: left;
+    text-align: left;
   }
-
-  .helpbutton {
-    aspect-ratio: 1/1;
-    width: auto;
-    height: 20px;
-    filter: drop-shadow(0px 15px 18px #000000);
-    translate: -95px 5px;
-    transition: all 1000ms;
-    fill: #fff;
-    content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Question_mark_white_icon.svg/2048px-Question_mark_white_icon.svg.png');
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
+  #team2 {
+    float: right;
+    text-align: right;
   }
-
-  .ufabutton:hover .helpbutton {
-    transform: scale(1.2) rotate(360deg);
-    transition: all 1000ms;
+  #seed {
+    font-size: 20px;
   }
-
-  .ufabutton:hover .discordbutton {
-    transform: scale(1.2) rotate(360deg);
-    transition: all 1000ms;
-  }
-
-  .ufabutton:hover .statsbutton {
-    content: url('/stats-alt.png');
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
-  }
-
-  .ufabutton:hover {
-    transition: all 250ms;
-    cursor: pointer;
-    transform: scale(1.1);
-    font-size: 22px;
-  }
-
-  .ufabutton:active {
-    transition: all 250ms;
-    cursor: pointer;
-    transform: scale(1.1);
-    font-size: 22px;
+  #name {
+    font-size: 30px;
+    font-weight: bold;
   }
 </style>
 

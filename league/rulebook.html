@@ -281,7 +281,7 @@
   </style>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Home | UFA S3</title>
+  <title>Rulebook | UFA S3</title>
   <link href="/style.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -424,107 +424,117 @@
       animation: dynam 5s linear 2s infinite alternate;
       background-color: #005aa8;
     }
+
+    h1 {
+      color: white;
+    }
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <div style="display: inline-block; width: 100%; text-align: center; margin-top: 10px;"">
-      <div style=" width: 49%; float: left;">
-    <img src="ufa-alt.png"
-      style="aspect-ratio: 133/120; width: auto; height: 350px; filter: brightness(130%); margin-left: 20px; margin-top: 100px;">
+  <h1>On-Field Rules</h1>
+  <div class="rule">
+    <h1>Player Count</h1>
+    <p>The minimum number of players is 12 (6v6). A 6v7, 7v8, and so on, can be forced. If granted permission from a
+      referee or commissioner, a 5v5 or 5v6 can be legal. The player count MUST be agreed on prior to the game in the
+      scheduling thread along with the game time.
+    </p>
+    <span>Game Re-Schedule</span>
   </div>
-  <div style="width: 49%; float: right; margin-top: 85px; color: white;">
-    <h1>Welcome to UFA-FF S3</h1>
-    <a href="https://discord.gg/JAYZ29MJKb"><button class="ufabutton"><img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6cc3c481a15a141738_icon_clyde_white_RGB.png" class="discordbutton">Discord</button></a>
-    <br>
-    <br>
-    <a href="/league/stats/qb"><button class="ufabutton"><img class="statsbutton">Stats</button></a>
-    <br>
-    <br>
-    <a><button class="ufabutton"><img class="helpbutton">Support</button></a>
+  <div class="rule">
+    <h1>Milking</h1>
+    <p>During the final minute of the second and fourth quarter, you cannot intentionally run the play clock below 10
+      seconds prior to the play.
+    </p>
+    <span>Turnover</span>
   </div>
+  <div class="rule">
+    <h1>Gamepasses</h1>
+    <p>Trucking is not allowed under any circumstances. Hitsticking is useless due to the fumble chance being 0%.
+    </p>
+    <span>Turnover</span>
+  </div>
+  <div class="rule">
+    <h1>JP Exploits & Glitches</h1>
+    <p>Angling and other jump power glitches are not allowed. This is because you gain an unfair advantage by using the
+      glitch.
+    </p>
+    <span>Player Ejection & 10 YD Penalty</span>
+  </div>
+  <div class="rule">
+    <h1>Grounding</h1>
+    <p>Grounding is purposefully overthrowing and not throwing near a receiver (usually to avoid pressure). A 10-yard
+      penalty and a loss of a down will result. If the pass hits the stadium's stands, it will be called grounding.
+    </p>
+    <span>10 YD Penalty</span>
+  </div>
+  <div class="rule">
+    <h1>PClocks</h1>
+    <p>Each team gets 1 PClock per drive. You CANNOT PClock mid-drive; you can only PClock before a drive. PClocks may
+      go as long as needed, however if a referee detects you abusing this, there will be a punishment.
+    </p>
+    <span>5 YD Penalty & Loss of Down</span>
+  </div>
+  <div class="rule">
+    <h1>Offensive Linemen</h1>
+    <p>Teams are allowed 1 full time blocker. Full time blockers must be lined up inside the hashes. These players catch
+      and cannot go past the LOS until the ball is thrown. To be declared eligeble, the player cannot block further than
+      5 yards back.
+    </p>
+    <span>10 YD Penalty & Loss of Down</span>
+  </div>
+  <div class="rule">
+    <h1>4th & 25 Attempts</h1>
+    <p>Teams can elect to go for a 4th & 25 from their own 25 yard line. This must be called prior to the kickoff and
+      the calling team must be losing. Additionally, this can only be called in the 4th quarter. If possible, let the
+      referee set this up with commands.
+    </p>
+  </div>
+  <div class="rule">
+    <h1>4th Downs</h1>
+    <p>Teams can elect to go for it (GFI) at ANY time by saying so in chat. To go for it, the following commands should
+      be run: /down 1; /newplay; /down 4.
+    </p>
+  </div>
+  <div class="rule">
+    <h1>QB Running</h1>
+    <p>Quarterbacks are not allowed to run the ball while forcing.
+  </p>
+    <span>10 YD Penalty & Loss of Down</span>
+  </div>
+  <h1>Referee Guidelines</h1>
+  <div class="rule">
+    <p>A referee must be present during a game.
+      An emergency ref can be decided upon.
+      Refs must be given maximum admin powers.
+      Purposefully moving or affecting the refs' ability to make accurate calls will result in a 15-yard penalty. If it continues, it will result in an FFL.
+      A ref's private server must be used unless the ref grants permission to use an FO’s server.
+
+  </p>
+  </div>
+  <h1>Pre-Game Rules</h1>
+  <div class="rule">
+    <p>Not playing at an agreed-upon time will result in an FFL.
+      Only 2 walk-ons are allowed, these walk-ons cannot be from another team unless they demand before joining a team.
+      Before the game starts, both FOs must be given admin level 4. Coaches can be given admin level 1 with permission from both FOs. If a referee deems administrative abuse, it will result in a 15-yard penalty.
+
+  </p>
   </div>
 </body>
 <style>
-  .ufabutton {
-    padding: 15px;
-    background: rgb(0, 255, 254);
-    background: -webkit-linear-gradient(#00fffe, #039dfc);
-    border: none;
-    border-radius: 5px;
-    font-family: 'Play';
+  .rule {
+    padding: 20px;
+    color: white;
+    background-color: #333333;
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .rule p {
     font-size: 20px;
-    font-weight: bold;
-    text-shadow: 0px 8px 12px rgba(0, 0, 0, 0.77);
-    color: #fff;
-    width: 350px;
-    transition: all 250ms;
   }
 
-  .discordbutton {
-    aspect-ratio: 619/469;
-    width: auto;
-    height: 20px;
-    filter: drop-shadow(0px 15px 18px #000000);
-    translate: -100px 3px;
-    transition: all 1000ms;
-  }
-
-  .statsbutton {
-    aspect-ratio: 619/469;
-    width: auto;
-    height: 20px;
-    filter: drop-shadow(0px 15px 18px #000000);
-    translate: -110px 5px;
-    transition: all 1000ms;
-    fill: #fff;
-    content: url('/stats-bars_icon-icons.com_49979.png');
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
-  }
-
-  .helpbutton {
-    aspect-ratio: 1/1;
-    width: auto;
-    height: 20px;
-    filter: drop-shadow(0px 15px 18px #000000);
-    translate: -95px 5px;
-    transition: all 1000ms;
-    fill: #fff;
-    content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Question_mark_white_icon.svg/2048px-Question_mark_white_icon.svg.png');
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
-  }
-
-  .ufabutton:hover .helpbutton {
-    transform: scale(1.2) rotate(360deg);
-    transition: all 1000ms;
-  }
-
-  .ufabutton:hover .discordbutton {
-    transform: scale(1.2) rotate(360deg);
-    transition: all 1000ms;
-  }
-
-  .ufabutton:hover .statsbutton {
-    content: url('/stats-alt.png');
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
-  }
-
-  .ufabutton:hover {
-    transition: all 250ms;
-    cursor: pointer;
-    transform: scale(1.1);
-    font-size: 22px;
-  }
-
-  .ufabutton:active {
-    transition: all 250ms;
-    cursor: pointer;
-    transform: scale(1.1);
-    font-size: 22px;
+  .rule span {
+    color: yellow;
   }
 </style>
 
