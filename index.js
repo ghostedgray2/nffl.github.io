@@ -45,7 +45,10 @@ window.onload = () => {
     if (!accessToken) {
         window.location.href('/')
     }
-
+if (accessToken) {
+  localStorage.setItem("username", ` ${username}#${discriminator}`)
+  localStorage.setItem("avatar", `https://cdn.discordapp.com/avatars/${id}/${avatar}.jpg`)
+}
     fetch('https://discord.com/api/users/@me', {
     headers: {
         authorization: `${tokenType} ${accessToken}`,
