@@ -38,13 +38,6 @@ fetch('https://discord.com/api/users/@me', {
 .catch(console.error);
 const { username, discriminator, avatar, id} = response;
 //set the welcome username string
-localStorage.setItem("username", ` ${username}#${discriminator}`)
-localStorage.setItem("avatar", `https://cdn.discordapp.com/avatars/${id}/${avatar}.jpg`)
-document.getElementById('disname').innerText = ` ${username}#${discriminator}`;
-
-//set the avatar image by constructing a url to access discord's cdn
-document.getElementById("disavatar").src = `https://cdn.discordapp.com/avatars/${id}/${avatar}.jpg`;
-
 window.onload = () => {
     const fragment = new URLSearchParams(window.location.hash.slice(1));
     const [accessToken, tokenType] = [fragment.get('access_token'), fragment.get('token_type')];
@@ -62,6 +55,8 @@ window.onload = () => {
     .then(response => {
         console.log(response);
         const { username, discriminator, avatar, id} = response;
+      localStorage.setItem("username", ` ${username}#${discriminator}`)
+      localStorage.setItem("avatar", `https://cdn.discordapp.com/avatars/${id}/${avatar}.jpg`)
         //set the welcome username string
         document.getElementById('disname').innerText = localStorage.getItem("username");
 
