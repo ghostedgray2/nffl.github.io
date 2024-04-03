@@ -38,6 +38,8 @@ fetch('https://discord.com/api/users/@me', {
 .catch(console.error);
 const { username, discriminator, avatar, id} = response;
 //set the welcome username string
+localStorage.setItem("username", ` ${username}#${discriminator}`)
+localStorage.setItem("avatar", `https://cdn.discordapp.com/avatars/${id}/${avatar}.jpg`)
 document.getElementById('disname').innerText = ` ${username}#${discriminator}`;
 
 //set the avatar image by constructing a url to access discord's cdn
@@ -61,10 +63,10 @@ window.onload = () => {
         console.log(response);
         const { username, discriminator, avatar, id} = response;
         //set the welcome username string
-        document.getElementById('disname').innerText = ` ${username}#${discriminator}`;
+        document.getElementById('disname').innerText = localStorage.getItem("username");
 
         //set the avatar image by constructing a url to access discord's cdn
-        document.getElementById("disavatar").src = `https://cdn.discordapp.com/avatars/${id}/${avatar}.jpg`;
+        document.getElementById("disavatar").src = localStorage.getItem("avatar");
     })
     .catch(console.error);
 
