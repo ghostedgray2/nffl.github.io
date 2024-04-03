@@ -58,8 +58,7 @@ if (accessToken) {
     .then(response => {
         console.log(response);
         const { username, discriminator, avatar, id} = response;
-      localStorage.setItem("username", ` ${username}#${discriminator}`)
-      localStorage.setItem("avatar", `https://cdn.discordapp.com/avatars/${id}/${avatar}.jpg`)
+
         //set the welcome username string
         document.getElementById('disname').innerText = localStorage.getItem("username");
 
