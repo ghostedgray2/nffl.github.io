@@ -1,7 +1,7 @@
 <area id="html">
 <!DOCTYPE html>
 <html>
-<script src="/login.js"></script>
+
 <head>
   <script src="/globalHeader.js"></script>
   <script>
@@ -158,6 +158,7 @@
 
     h1 {
       padding-left: 10px;
+      text-align: center;
     }
 
     .sr-only {
@@ -280,7 +281,7 @@
   </style>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Rulebook | UFA S3</title>
+  <title>Home | UFA S3</title>
   <link href="/style.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -289,36 +290,9 @@
 
 <body>
   <blank id="enclosure">
-    <header>
-      <a class="homelink"> <img src="https://i.ibb.co/5kg3xCQ/ufaframe.png"
-          style="aspect-ratio: 64 / 25; width: auto; height: 30px; text-align: center; margin: auto; vertical-align: middle; margin-top: -10px; "></a>
-      <div class="dropdown">
-        <a href="index.html" class="dropbtn">
-          <b>Stats</b></a>
-        <div class="dropdown-content">
-          <a href="qb.html" class="qblink">QB</a>
-          <a href="/league/stats/wr" class="wrlink">WR</a>
-          <a href="db.html" class="dblink">DB</a>
-          <a href="de.html" class="delink">DE</a>
-        </div>
-      </div>
-
-      <a href="standings.html" class="standingslink">
-        <b>Standings</b>
-      </a>
-      <div class="dropdown" style="float: right; margin-right: 30px;">
-        <a href="index.html" class="dropbtn">
-          <b>︙</b></a>
-        <div class="dropdown-content" style="left: -140px;">
-          <a href="?editor=true" id="statmode">Stat Mode</a>
-        </div>
-      </div>
-    </header>
-    <header class="gra">
-    </header>
+  
   </blank>
   <script src="/globalHeader.js"></script>
-
   <script>
 
         // initialization
@@ -423,65 +397,164 @@
       animation: dynam 5s linear 2s infinite alternate;
       background-color: #005aa8;
     }
-
-    h1 {
-      color: white;
-    }
-
-    .texans {
-      background-color: #03202F;
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <h1 style="text-align: center; padding-left: 0;">Week 1</h1>
-    <div style="width: 90%; background-color: darkgray; height: 100px; margin: auto; margin-top: 20px; border-radius: 5px; overflow: hidden;box-sizing: border-box;">
-      <div class="texans" style="width: 40%; height: 100%;display: inline-flex;box-sizing: border-box" ><h1 style="width: 100%; text-align: center; padding-left: 0;vertical-align: middle; height: 100px;" ><a href="/league/standings.html?search=cardinals"> TEXANS</a></h1>
-      </div><div style="width:19%; background-color: blue; height: 100%; margin: auto; display: inline-flex; position: absolute; max-height: 100px; max-width: 18%; overflow: hidden;box-sizing: border-box;vertical-align: middle;">
-        <h1 style="width: 100%; text-align: center; padding-left: 0;vertical-align: middle; height: 100px;">TBD</h1>
-        </div><div style="width: 40%; background-color: red; height: 100%;display: inline-flex; float: right;box-sizing: border-box">
-        </div>
-    </div>
 </body>
 <style>
-  #scorebug {
-    color: white;
+
+  .hold {
+    background-color: #ddd;
+    margin: auto;
+  }
+  .ufabutton {
+    padding: 15px;
+    background: rgb(0, 255, 254);
+    background: -webkit-linear-gradient(180deg, #00fffe, #039dfc);
+    border: none;
+    border-radius: 5px;
+    font-family: 'Play';
+    font-size: 20px;
     font-weight: bold;
-    font-size: 35px;
-    text-align: center;
-    margin: auto;
-  }
-  a {
-    color: inherit;
-  }
-  .rule {
-    padding: 20px;
-    color: white;
-    background-color: #333333;
-    width: 75%;
-    margin: auto;
-    margin-top: 20px;
-    max-height: 200px;
-    overflow:auto;
+    text-shadow: 0px 8px 12px rgba(0, 0, 0, 0.77);
+    color: #fff;
+    width: 350px;
+    transition: all 250ms;
   }
 
-  .rule p {
-    
+  .discordbutton {
+    aspect-ratio: 619/469;
+    width: auto;
+    height: 20px;
+    filter: drop-shadow(0px 15px 18px #000000);
+    translate: -100px 3px;
+    transition: all 1000ms;
   }
-  #team {
-    float: left;
-    text-align: left;
+
+  .statsbutton {
+    aspect-ratio: 619/469;
+    width: auto;
+    height: 20px;
+    filter: drop-shadow(0px 15px 18px #000000);
+    translate: -110px 5px;
+    transition: all 1000ms;
+    fill: #fff;
+    content: url('/stats-bars_icon-icons.com_49979.png');
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
   }
-  #team2 {
-    float: right;
-    text-align: right;
+
+  .helpbutton {
+    aspect-ratio: 1/1;
+    width: auto;
+    height: 20px;
+    filter: drop-shadow(0px 15px 18px #000000);
+    translate: -95px 5px;
+    transition: all 1000ms;
+    fill: #fff;
+    content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Question_mark_white_icon.svg/2048px-Question_mark_white_icon.svg.png');
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
   }
-  #seed {
-    font-size: 20px;
+
+  .ufabutton:hover .helpbutton {
+    transform: scale(1.2) rotate(360deg);
+    transition: all 1000ms;
   }
-  #name {
-    font-size: 30px;
-    font-weight: bold;
+
+  .ufabutton:hover .discordbutton {
+    transform: scale(1.2) rotate(360deg);
+    transition: all 1000ms;
+  }
+
+  .ufabutton:hover .statsbutton {
+    content: url('/stats-alt.png');
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+  }
+
+  .ufabutton:hover {
+    transition: all 250ms;
+    cursor: pointer;
+    transform: scale(1.1);
+    font-size: 22px;
+  }
+
+  .ufabutton:active {
+    transition: all 250ms;
+    cursor: pointer;
+    transform: scale(1.1);
+    font-size: 22px;
   }
 </style>
+<script>
+  function sendMessage(payload, webhookUrl) {
+    const data = typeof payload === 'string' ? { content: payload } : payload;
+
+    return new Promise((resolve, reject) => {
+      fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            reject(new Error(`Could not send message: ${response.status}`));
+          }
+          resolve();
+        })
+        .catch((error) => {
+          console.error(error);
+          reject(error);
+        });
+    });
+  }
+
+  // send a simple message
+  var webhook = "";
+  function sendmsg() {
+    const text = document.getElementById("cont").value;
+  sendMessage(text, webhook).catch((error) =>
+    console.error(error),
+  );
+  };
+
+  /* send a message, but change the username and the avatar
+  sendMessage(
+    {
+      content: 'Hello from my app!',
+      avatar_url: 'https://i.imgur.com/KEungv8.png',
+      username: 'Test Hook',
+    },
+    WEBHOOK_URL,
+  ).catch((error) => console.error(error));
+
+  // send an embed and change the user again
+   sendMessage(
+    {
+      avatar_url: 'https://i.imgur.com/ofPowdD.png',
+      username: 'Cattian Hook',
+      embeds: [
+        {
+          title: 'Cats, cats, cats',
+          color: 0xe7d747,
+          thumbnail: {
+            url: 'https://i.imgur.com/2bvab7y.jpeg',
+          },
+        },
+      ],
+    },
+    WEBHOOK_URL,
+  ).catch((error) => console.error(error));
+  */
+</script>
+
+<input type="text" id="cont">
+<button onclick="sendmsg()">send</button>
 
 </html>
 </area>

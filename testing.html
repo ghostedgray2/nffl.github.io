@@ -1,0 +1,66 @@
+<script>
+  function sendMessage(payload, webhookUrl) {
+    const data = typeof payload === 'string' ? { content: payload } : payload;
+
+    return new Promise((resolve, reject) => {
+      fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            reject(new Error(`Could not send message: ${response.status}`));
+          }
+          resolve();
+        })
+        .catch((error) => {
+          console.error(error);
+          reject(error);
+        });
+    });
+  }
+
+  // send a simple message
+  var webhook = "https://discord.com/api/webhooks/1226657684561068035/vk10fyrzMatea7N0SQt7-lUtwA0M8IAFxdPZRAurU8pSgAGoUuLIz4hI385P8v-lCZyb";
+  function sendmsg() {
+    const text = document.getElementById("cont").value;
+  sendMessage(text, webhook).catch((error) =>
+    console.error(error),
+  );
+  };
+
+  /* send a message, but change the username and the avatar
+  sendMessage(
+    {
+      content: 'Hello from my app!',
+      avatar_url: 'https://i.imgur.com/KEungv8.png',
+      username: 'Test Hook',
+    },
+    WEBHOOK_URL,
+  ).catch((error) => console.error(error));
+
+  // send an embed and change the user again
+   sendMessage(
+    {
+      avatar_url: 'https://i.imgur.com/ofPowdD.png',
+      username: 'Cattian Hook',
+      embeds: [
+        {
+          title: 'Cats, cats, cats',
+          color: 0xe7d747,
+          thumbnail: {
+            url: 'https://i.imgur.com/2bvab7y.jpeg',
+          },
+        },
+      ],
+    },
+    WEBHOOK_URL,
+  ).catch((error) => console.error(error));
+  */
+</script>
+
+<input type="text" id="cont">
+<button onclick="sendmsg()">send</button>

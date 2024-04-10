@@ -40,8 +40,8 @@
 
         //set the avatar image by constructing a url to access discord's cdn
         document.getElementById("avatar").src = `https://cdn.discordapp.com/avatars/${id}/${avatar}.jpg`;
-      localStorage.setItem("token", accessToken);
-      localStorage.setItem("tokentype", tokenType);
+      localStorage.setItem("avatar", `${avatar}`);
+      localStorage.setItem("name", `${username}`);
     })
     .catch(console.error);
 
