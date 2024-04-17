@@ -402,11 +402,11 @@
     <div style="background-color: #545353; width: 90%; height: 30px; margin: auto; font-family: 'Play';"
       class="buttonholder">
 
-      <button class="selectedbutton">QB</button><button href="/league/stats/wr">WR</button><button href="/league/stats/db">DB</button><button href="/league/stats/de">DE</button>
+      <button class="selectedbutton" href="/league/stats/qb" onclick="toPage('/league/stats/qb')">QB</button><button href="/league/stats/wr" onclick="toPage('/league/stats/wr')">WR</button><button href="/league/stats/db" onclick="toPage('/league/stats/db')">DB</button><button href="/league/stats/de" onclick="toPage('/league/stats/de')">DE</button>
     </div>
-
+<br>
     <div class="table-wrap">
-      <table class="sortable" id="table">
+      <table class="sortable" id="table"> 
         <caption>
 
         </caption>
@@ -432,97 +432,85 @@
               }
             }
           }
+
+          function toPage(page) {
+            window.location.href = page;
+          }
         </script>
         <style></style>
         <thead>
           <tr>
-            <input type="text" id="myInput" onkeyup="searchTable()" placeholder="Search for names.."
-              style="border: none; background-color: #2f3030; width: 90%; margin-left: 5%; color: white;">
-            <th>
-              <button>
+
+            <th aria-sort="descending">
+              <button data-column-index="0">
                 Player
                 <span aria-hidden="true"></span>
               </button>
 
-            <th class="num" aria-sort="descending">
-              <button>
+            </th><th class="num">
+              <button data-column-index="1">
                 QBR
                 <span aria-hidden="true"></span>
               </button>
 
-            <th class="num">
-              <button>
+            </th><th class="num">
+              <button data-column-index="2">
                 Cmp
                 <span aria-hidden="true"></span>
               </button>
 
-            <th class="num">
-              <button>
+            </th><th class="num">
+              <button data-column-index="3">
                 Att
                 <span aria-hidden="true"></span>
               </button>
 
-            <th class="num">
-              <button>
+            </th><th class="num">
+              <button data-column-index="4">
                 Cmp%
                 <span aria-hidden="true"></span>
               </button>
 
-            <th class="num">
-              <button>
+            </th><th class="num">
+              <button data-column-index="5">
                 TD
                 <span aria-hidden="true"></span>
               </button>
 
-            <th class="num">
-              <button>
+            </th><th class="num">
+              <button data-column-index="6">
                 INT
                 <span aria-hidden="true"></span>
               </button>
 
-            <th class="num">
-              <button>
+            </th><th class="num">
+              <button data-column-index="7">
                 Yds
                 <span aria-hidden="true"></span>
               </button>
 
-            <th class="num">
-              <button>
+            </th><th class="num">
+              <button data-column-index="8">
                 INT%
                 <span aria-hidden="true"></span>
               </button>
 
-            <th class="num">
-              <button>
+            </th><th class="num">
+              <button data-column-index="9">
                 Sk
                 <span aria-hidden="true"></span>
               </button>
 
-            <th class="num">
-              <button>
+            </th><th class="num">
+              <button data-column-index="10">
                 Y/A
                 <span aria-hidden="true"></span>
               </button>
 
-            <th class="noSort">GP</th>
+            </th><th class="noSort">GP</th>
           </tr>
         </thead>
-        <tbody id="tbody">
-          <tr>
-            <td>doctorthom</td> <!-- Player Name -->
-            <td></td> <!-- QB Rating -->
-            <td>56</td> <!-- Completions -->
-            <td>87</td> <!-- Attempts -->
-            <td>-</td> <!-- Completion Percent -->
-            <td>5</td> <!-- Touchdowns -->
-            <td>1</td> <!-- Interceptions-->
-            <td>264</td> <!-- Yards -->
-            <td>-</td> <!-- Interception Percent -->
-            <td>1</td> <!-- Sacks Taken -->
-            <td>-</td> <!-- Yards/Attempt -->
-            <td>-</td> <!-- Games Played -->
-          </tr>
-        </tbody>
+        <tbody id="tbody"><tr><td>Henwy_12345</td><td></td><td>17</td><td>37</td><td></td><td>5</td><td>4</td><td>553</td><td></td><td>6</td><td></td><td>1</td></tr><tr><td>Privacied</td><td></td><td>18</td><td>43</td><td></td><td>9</td><td>5</td><td>554</td><td></td><td>0</td><td></td><td>1</td></tr></tbody>
         <script>
           /* TABLE SORTER */
 
@@ -686,7 +674,7 @@
           });
 
         </script>
-      </table>
+       </table>
     </div>
     <br>
     <br>
@@ -754,9 +742,7 @@
 
       window.onload = function doMath() {
         // Declare variables
-        var input, filter, tbl, tr, td, txtValue, cmp, att, num;
-        input = document.getElementById("myInput");
-        filter = input.value.toUpperCase();
+        var tbl, tr, td, txtValue, cmp, att, num;
         tbl = document.getElementById("tbody");
         tr = table.getElementsByTagName("tr");
 
