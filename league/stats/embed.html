@@ -1,0 +1,42 @@
+<iframe src="https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vTHw3nb_R_XmFZ1p2zOCcQ_vsgEhUeLdcSQz5prBis5t-6KIRXTkqBEBKhIZTtQKPOWszxyEWj8uf2l/pubhtml/sheet?headers=false&gid=201269692" id="frame"></iframe>
+
+<table style="border: black 1px solid;">
+  <tr id="tabledatainput" style="border: black 1px solid;">
+    
+  </tr>
+</table>
+<table style="border: black 1px solid;">
+  <tr id="tabledatainput2" style="border: black 1px solid;">
+    <td class=""></td>
+  </tr>
+<body id="body"></body>
+</table>
+<script>
+  class a {
+    #document;
+  }
+  var tab = document.getElementById("tabledatainput");
+
+  function makeHttpObject() {
+    try {return new XMLHttpRequest();}
+    catch (error) {}
+    try {return new ActiveXObject("Msxml2.XMLHTTP");}
+    catch (error) {}
+    try {return new ActiveXObject("Microsoft.XMLHTTP");}
+    catch (error) {}
+
+    throw new Error("Could not create HTTP request object.");
+  }
+
+  var request = makeHttpObject();
+  request.open("GET", "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vTHw3nb_R_XmFZ1p2zOCcQ_vsgEhUeLdcSQz5prBis5t-6KIRXTkqBEBKhIZTtQKPOWszxyEWj8uf2l/pubhtml/sheet?headers=false&gid=201269692", true);
+  request.send(null);
+  request.onreadystatechange = function() {
+    if (request.readyState == 4)
+     //tab.innerHTML = request.responseText.split("<tr>")
+      var output = request.
+    document.getElementById("body").innerHTML = output;
+  };
+  
+ 
+</script>
